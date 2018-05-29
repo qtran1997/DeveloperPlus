@@ -1,32 +1,29 @@
-<nav class="navbar navbar-expand-md">
-
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Developer+</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="collapse_target">
-        <a href="index.php" class="navbar-brand"><img src="Images/sheeklogo.jpg" alt=""></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="videos.php">Video Lessons</a>
+            </li>
 
-        <ul class="navbar-nav">    
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="videos.php">Videos</a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
         </ul>
-           <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
-            </li>
+                <a class="nav-link" href="login.php">Sign In</a>
+            </li>                  
             <li class="nav-item">
-                <a class="nav-link" href="signup.php">Signup</a>
-            </li>
-        </ul>
+                <a class="nav-link" href="signup.php">Register</a>
+            </li>        
+        </ul>        
     </div>
 </nav>
-
-

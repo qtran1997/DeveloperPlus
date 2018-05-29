@@ -1,49 +1,20 @@
 
 html {
     overflow-y: scroll;
+    height: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family: "Helvetica", sans-serif;
 }
 
 /************************* NAVBAR *************************/
-.navbar {
-    top: 0;
-    left: 0;
-    height: 15vh;
-    width: 100%;
-    height:15vh;
-    padding: 10px 50px;
-    background: #2F2D2E;
-}
 
-.navbar img {
-    height: 50px;
-    width: 250px;
-}
-
-.navbar ul {
-    margin-top: 12px;
-    padding-left: 23px;
-    font-size: 13px;
-    text-align: center;
-}
-
-.navbar ul li {
-    list-style: none;
-}
-
-.nav-link {
-/*    line-height: 30px;*/
-    color: #fff !important;
-    padding: 5px 12px;
-    text-decoration: none;
-    text-transform: uppercase;
-    background:none;
-    border:none;
+.navbar-brand, .navbar ul li a{
+    color: #fff;
 }
 
 .nav-link:hover {
@@ -58,12 +29,21 @@ body {
 
 /************************* LOADING-TOP *************************/
 
-section.top {
-    width: 100%; 
-    height: 85vh;
-    background: url(Images/peopletapping.jpeg);
+#cover {
+    background: url(Images/lake.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#cover-caption {
+    width: 100%;
+    color: #000 !important;
+    text-decoration: none;
 }
 
 /************************* HOME PAGE SECTION A *************************/
@@ -368,89 +348,99 @@ section.footer .bottom-footer h3{
 
 
 /************************* CONTACT *************************/
-#contact-page > * {
+
+#contact-page {
     margin: 0;
     padding: 0;
 }
 
-section.contact-top {
-    background: url(Images/tapping.jpg);
-    height: 30vh;
-    background-size: cover;
-    background-position: center;
-}
-
-section.contact-top h2 {
-    text-align: center;
-    color: #fff;
-    font-size: 45px;
-    font-weight: bold;
-    font-family: 'Catamaran', sans-serif;
-}
-
-section.contact-top p {
-    text-align: center;
-    color: #000;
-    font-size: 20px;
-    margin-top: -5px;
-    font-family: 'Catamaran', sans-serif;
-    font-weight: bold;
-}
-
-.contact-container {
-    max-width: 800px;
-    height: 550px;
+.contact-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
     background: #fff;
-    margin: 50px auto;
-    box-sizing: border-box;
     padding: 40px;
-    box-shadow: 0 0 20px rgba(72,98,85,0.6);
-}
-
-.contact-container p {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 20px;
-    color: #486255;
-}
-
-.input, .area {
-    width: 100%;
-    padding: 20px;
     box-sizing: border-box;
-    margin-bottom: 25px;
-    border: 2px solid #e9eaea;
-    font-size: 14px;
-    border-radius: 5px;
-    outline: none;
-    transition: all 0.5s ease;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-.user-info .input {
-    width: 48%;
-    float: left;
-    margin-right: 4%;
-}
-
-.user-info .input:last-child {
-    margin-right: 0;
-}
-
-.message .area {
-    height: 150px;
-}
-
-.send-info .btn {
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    color: #fff;
+.contact-box h2 {
+    margin: 0 0 40px;
+    padding: 0;
+    color: #f7497d;
     text-transform: uppercase;
-    margin: 0 auto !important;
-    cursor: pointer;
-    border-radius: 3px;
 }
+
+.contact-box input {
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.contact-box textarea {
+    height: 80px;
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+
+.contact-box input, .contact-box textarea {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999;
+}
+
+/*
+.contact-box textarea {
+margin-bottom: 20px;
+}
+
+.contact-box[type="submit"] {
+border-bottom: none;
+cursor: pointer;
+background: #f7497d;
+color: #fff;
+margin-bottom: 0;
+text-transform: uppercase;
+}
+
+.contact-box form div {
+position: relative;
+}
+
+contact-box form div label {
+position: absolute;
+top: -10px;
+left: 0;
+color: #999;
+transition: .5s;
+pointer-events: none;
+}
+
+.contact-box input:focus ~ label,
+.contact-box textarea:focus ~ label,
+.contact-box input:valid ~ label,
+.contact-box textarea:valid ~ label{
+top: -12px;
+left: 0;
+color: #f7497d;
+font-size: 12px;
+font-weight: bold;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus,
+.contact-box input:valid,
+.contact-box textarea:valid {
+border-bottom: 2px solid #f7497d;
+}
+*/
+
+
 /************************* END OF CONTACT *************************/
 
 
@@ -612,7 +602,7 @@ section.contact-top p {
     font-size: 18px;
 }
 
-#totoal-cost {
+#total-cost {
     float: right;
 }
 
@@ -716,80 +706,3 @@ section.contact-top p {
 }
 
 /************************* END OF MODAL ACCOUNT FORMS FOR VIDEOS *************************/
-
-
-/************************* MEDIA QUERIES *************************/
-/*
-@media screen and (max-width: 1050px) {
-
-.responsive-bar {
-display: block;
-width: 100%;
-height: 2px;
-background: #101010;
-top: 0;
-left: 0;
-padding: 5px 20px;
-box-sizing: border-box;
-z-index: 1;
-}
-
-.responsive-bar .logo img {
-float: left;
-height: 45px;
-padding-top: 3px;
-}
-
-.responsive-bar .menu h4 {
-float: right;
-color: #fff;
-margin: 0;
-padding: 0;
-line-height: 60px;
-text-transform: uppercase;
-cursor: pointer;
-}
-
-nav {
-background: #101010;
-height: 60px;
-padding: 0;
-}
-
-nav .logo {
-display: none;
-}
-
-nav ul {
-position: absolute;
-width: 100%;
-top: 60px;
-left: 0;
-background: #101010;
-float: none;
-display: none;
-}
-
-nav ul.active {
-display: block;
-}
-
-nav ul li {
-width: 100%;
-}
-
-nav ul li a {
-display: block;
-padding: 0;
-width: 100%;
-text-align: center;
-line-height: 40px !important;
-color: #fff;
-}
-
-#contact-send {
-background: #f00;
-}
-}
-*/
-

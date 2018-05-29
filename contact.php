@@ -34,36 +34,35 @@ session_start();
             ?>
         </div>
 
-        <section class="contact-top">
-            <div class="contact-header-text">
-                <h2>Get In Touch</h2>
-                <hr class="w-75 clearfix d-md-none">
-                <p id="small-text">Have any questions? We'd love to help!</p>
-            </div>
-        </section>
-
-        <div class="contact-container">
-            <p>Message Us</p>
-            <form action="">
-                <div class="user-info">
-                    <input type="text" class="input" placeholder="Full name" required>
-                    <input type="email" class="input" placeholder="Email address" required>
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <form>
+                <div>
+                    <input type="text" name="" required>
+                    <label for="">Name</label>
                 </div>
-
-                <div class="message">
-                    <textarea name="message" class="area" id="message" required></textarea>
+                <div>
+                    <input type="email" name="" required>
+                    <label for="">Email Address</label>
                 </div>
-
-                <div class="send-info">
-                    <button class="btn btn-primary">Send Message</button>
+                <div>
+                    <textarea name="" id="" required></textarea>
+                    <label>Message</label>
                 </div>
+                <input type="submit" name="" value="Submit">
             </form>
         </div>
-        <section class="footer">
-            <?php  
-            include 'footer.php';
-            ?>
-        </section>
+
+
+
+
+        <!--
+<section class="footer">
+<?php  
+include 'footer.php';
+?>
+</section>
+-->
 
 
     </body>

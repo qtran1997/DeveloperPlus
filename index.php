@@ -4,14 +4,23 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+        <!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:200" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="index.css"> 
 
         <title>Sheek Ticker</title>
@@ -33,13 +42,45 @@ session_start();
             ?>    
         </div>
 
-        <!-- 3 SECTIONS FOR LOADING PAGE -->
-
         <!-- THE TOP SECTION CONSISTING OF THE COVER PHOTO -->
-        <section class="top">
+        <section id="cover">
+            <div id="cover-caption">
+                <div class="container">
+                    <div class="col-sm-10 offset-sm-1">
+                        <h1 class="display-1">Welcome to CSS</h1>
+                        <p>A brief introduction to CSS.</p>
+                        <a href="#classes_offered" class="btn btn-outline-secondary btn-sm" role="button" id="down_arrow">&darr;</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!--
+<div class="row">
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="Images/html_icon.png" alt="Card image cap">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="Images/css_icon.png" alt="Card image cap">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="Images/bootstrap.png" alt="Card image cap">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+</div>
+-->
+
         <!-- THE MIDDLE SECTION CONSISTS OF ALL THE CONTENT ON THE PAGE, SPLIT INTO MULTIPLE SUB-SECTIONS -->
+
+
         <section class="middle-a">
             <div>
                 <hr class="w-100 clearfix d-md-none">
@@ -161,5 +202,15 @@ session_start();
             ?>
 
         </section>
+
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
