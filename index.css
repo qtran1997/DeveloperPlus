@@ -19,7 +19,7 @@ body {
 
 .nav-link:hover {
     background: #99C24D;
-    color: #fff !important;
+    color: #000 !important;
     text-decoration: none;
 }
 
