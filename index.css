@@ -1,5 +1,6 @@
 
 html {
+    overflow-y: scroll;
     height: 100%;
 }
 
@@ -12,7 +13,7 @@ body {
 
 /************************* NAVBAR *************************/
 
-.navbar-brand, .navbar ul li a{
+.navbar-brand, .navbar ul li a {
     color: #fff;
 }
 
@@ -22,6 +23,9 @@ body {
     text-decoration: none;
 }
 
+.nav-item {
+    height: 35px !important;
+}
 
 /************************* LOADING-TOP *************************/
 
@@ -38,6 +42,8 @@ body {
 
 #cover-caption {
     width: 100%;
+    color: #000 !important;
+    text-decoration: none;
 }
 
 /************************* HOME PAGE SECTION A *************************/
@@ -342,6 +348,7 @@ section.footer .bottom-footer h3{
 
 
 /************************* CONTACT *************************/
+
 #contact-page {
     margin: 0;
     padding: 0;
@@ -389,47 +396,47 @@ section.footer .bottom-footer h3{
 
 /*
 .contact-box textarea {
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .contact-box[type="submit"] {
-    border-bottom: none;
-    cursor: pointer;
-    background: #f7497d;
-    color: #fff;
-    margin-bottom: 0;
-    text-transform: uppercase;
+border-bottom: none;
+cursor: pointer;
+background: #f7497d;
+color: #fff;
+margin-bottom: 0;
+text-transform: uppercase;
 }
 
 .contact-box form div {
-    position: relative;
+position: relative;
 }
 
 contact-box form div label {
-    position: absolute;
-    top: -10px;
-    left: 0;
-    color: #999;
-    transition: .5s;
-    pointer-events: none;
+position: absolute;
+top: -10px;
+left: 0;
+color: #999;
+transition: .5s;
+pointer-events: none;
 }
 
 .contact-box input:focus ~ label,
 .contact-box textarea:focus ~ label,
 .contact-box input:valid ~ label,
 .contact-box textarea:valid ~ label{
-    top: -12px;
-    left: 0;
-    color: #f7497d;
-    font-size: 12px;
-    font-weight: bold;
+top: -12px;
+left: 0;
+color: #f7497d;
+font-size: 12px;
+font-weight: bold;
 }
 
 .contact-box input:focus,
 .contact-box textarea:focus,
 .contact-box input:valid,
 .contact-box textarea:valid {
-    border-bottom: 2px solid #f7497d;
+border-bottom: 2px solid #f7497d;
 }
 */
 
@@ -595,7 +602,7 @@ contact-box form div label {
     font-size: 18px;
 }
 
-#total-cost {
+#total-cost {    
     float: right;
 }
 
@@ -699,7 +706,3 @@ contact-box form div label {
 }
 
 /************************* END OF MODAL ACCOUNT FORMS FOR VIDEOS *************************/
-
-
-/************************* MEDIA QUERIES *************************/
-

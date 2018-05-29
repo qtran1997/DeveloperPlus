@@ -21,9 +21,6 @@ session_start();
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-
-
-
         <link rel="stylesheet" type="text/css" href="index.css"> 
 
         <title>Sheek Ticker</title>
@@ -45,8 +42,6 @@ session_start();
             ?>    
         </div>
 
-        <!-- 3 SECTIONS FOR LOADING PAGE -->
-
         <!-- THE TOP SECTION CONSISTING OF THE COVER PHOTO -->
         <section id="cover">
             <div id="cover-caption">
@@ -60,30 +55,31 @@ session_start();
             </div>
         </section>
 
-<!--
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="Images/html_icon.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="Images/css_icon.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="Images/bootstrap.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
+        <!--
+<div class="row">
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="Images/html_icon.png" alt="Card image cap">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="Images/css_icon.png" alt="Card image cap">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="Images/bootstrap.png" alt="Card image cap">
+<div class="card-body">
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
+</div>
 -->
 
         <!-- THE MIDDLE SECTION CONSISTS OF ALL THE CONTENT ON THE PAGE, SPLIT INTO MULTIPLE SUB-SECTIONS -->
+
 
         <section class="middle-a">
             <div>
@@ -199,7 +195,6 @@ session_start();
                 </div>
             </div>
         </section>
-
 
         <section class="footer">
             <?php  
