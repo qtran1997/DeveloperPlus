@@ -13,7 +13,7 @@ body {
 
 /************************* NAVBAR *************************/
 
-.navbar-brand, .navbar ul li a{
+.navbar-brand, .navbar ul li a {
     color: #fff;
 }
 
@@ -602,7 +602,7 @@ border-bottom: 2px solid #f7497d;
     font-size: 18px;
 }
 
-#total-cost {
+#total-cost {    
     float: right;
 }
 
