@@ -5,7 +5,7 @@ session_start();
     <head>
         <meta charset="UTF-8" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -153,33 +153,24 @@ session_start();
                 <form style="display:inline-block; margin-right:12%" action="stripesystem/stripe.php" method="POST">
                     <script
                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                            data-key="pk_live_xdV4AXHExAkbbKFcApLNROFp"
+                            data-key="pk_test_Zpooc1w4cUlZMOMsrHrs85V9"
                             data-amount="50"
                             data-name="AmazonClicker.com"
                             data-description="Amazon Clicker Charge"
                             data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
                             data-locale="auto"
-                            data-zip-code="true">
+                            data-zip-code="true"
+                            data-email="<?php echo $_SESSION['email'] ?>">
                     </script>
                 </form>
-                <form style="display:inline-block" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                    <h4>Pay with Paypal!</h4>
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="Schlicker">
-                    <input type="hidden" name="lc" value="US">
-                    <input type="hidden" name="item_name" value="Schlicker">
-                    <input type="hidden" name="item_number" value="LF1">
-                    <input type="hidden" name="amount" value="0.50">
-                    <input type="hidden" name="currency_code" value="USD">
-                    <input type="hidden" name="button_subtype" value="services">
-                    <input type="hidden" name="no_note" value="1">
-                    <input type="hidden" name="no_shipping" value="2">
-                    <input type="hidden" name="tax_rate" value="0.000">
-                    <input type="hidden" name="shipping" value="0.00">
-                    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <h5>Pay with Paypal!</h5>
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="G8K5YCE684SRW">
                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
+
 
             </div>
 

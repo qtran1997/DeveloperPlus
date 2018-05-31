@@ -6,7 +6,7 @@ session_start();
     <head>
         <meta charset="UTF-8" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">    
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -30,7 +30,15 @@ session_start();
         </div>
 
         <!-- Video Column Container-->
-
+        <?php
+        $failure = "";
+        if(!empty($_GET['failure'])) {
+            $failure = $_GET['failure'];
+        }
+        if($failure == 1) {
+            echo "<p class='error' style='text-align:center'>You have already commented!</p>";
+        }
+        ?>
         <div class="video-container">
             <div class="video-header">
                 <span>
@@ -38,6 +46,7 @@ session_start();
                         <i class="fas fa-arrow-circle-left"></i>
                         Previous Lesson
                     </span>
+
                     <span class="next" style="float:right";>
                         Next Lesson
                         <i class="fas fa-arrow-circle-right"></i>
@@ -246,6 +255,64 @@ session_start();
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="comment-container">
+            <div id="posted-comments">
+                <h5>10 out of 10 people recommend this tutorial</h5>
+                <!--
+<div class="comment">
+<p>
+<label for="comment-box">Name Here</label>
+<img id="upvote" src="Images/thumbUp.png">
+<textarea name="comment-box" class="comment-box" disabled>bruh this shit poo poo who made this website??</textarea>
+</p>    
+</div>
+-->
+                <?php 
+                include "loginsystem/dbh.php";
+
+                for ($i = 1; $i <= 5; $i++) {
+
+                    $sql = "SELECT * FROM commentsystem WHERE id='$i'";
+                    $result = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_assoc($result);
+                    $fname = $row['fname'];
+                    $comment = $row['comment'];
+                    $rating = "thumbUp.png";
+                    $date = substr($row['date'], 0, 10);
+                    $vote = "upvote";
+                    if($row['rating'] == 1) {
+                        $rating = "thumbUp.png";
+                        $vote = "upvote";
+                    }
+                    else {
+                        $rating = "thumbDown.png";
+                        $vote = "downvote";
+                    }
+
+                    echo '<div class="comment">
+                    <p>
+                        <label for="comment-box" style="display:inline-block; width:100px;">' . $fname . '<br>' . $date .'</label>
+                        <img id="' . $vote . '" src="Images/' . $rating . '">
+                        <textarea name="comment-box" class="comment-box" disabled>' . $comment . '</textarea>
+                    </p>    
+                </div>';
+                }
+                ?>
+                <button class="more-comments" type="button">read more</button>
+            </div>
+            <hr class="w-100 clearfix">
+            <h3>Add your own comment!</h3>
+            <form action="commentsystem/submitcomment.php" method="POST">
+                <div id="add-vote" >
+                    <input class="voting" id="upvote" name="upvote" readonly>
+                    <input class="voting" id="downvote" name="downvote" readonly>
+                    <textarea name="comment" class="comment-box" required></textarea>
+                    <br>
+                    <button id="submit-comment" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
 
         <section class="footer">

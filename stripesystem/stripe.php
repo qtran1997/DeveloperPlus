@@ -1,4 +1,6 @@
 <?php
+include "../loginsystem/dbh.php";
+session_start();
 require_once('./config.php');
 
 $token  = $_POST['stripeToken'];
@@ -15,8 +17,10 @@ $charge = \Stripe\Charge::create(array(
     'currency' => 'usd'
 ));
 
-
+$id = $_SESSION['id'];
 echo '<h1>Successfully charged $0.50!</h1>';
-$sql = "UPDATE aclickerlogin SET pb= '1'";
+$sql = "UPDATE aclickerlogin SET pb= '1' WHERE id ='$id'";
 $result = mysqli_query($conn, $sql);
+$_SESSION['pb'] = 1;
+header("Location: ../accountpage.php?purchased=1");
 ?>

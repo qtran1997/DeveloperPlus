@@ -255,7 +255,7 @@ section.footer .bottom-footer h3{
     color: white;
     text-align: center;
     padding: 1em;
-    margin-bottom: 120px;
+    margin-bottom: 10%;
 }
 
 .video-header {
@@ -309,12 +309,30 @@ section.footer .bottom-footer h3{
     font-size: 18px;
     padding-left: 5%;
     margin: 6px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.previous:hover{
+    cursor:pointer;
 }
 
 .next {
     font-size: 18px;
     padding-right: .5%;
     margin-top: 6px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.next:hover{
+    cursor:pointer;
 }
 
 .video-menu {
@@ -343,6 +361,106 @@ section.footer .bottom-footer h3{
 
 
 /************************* END OF VIDEOS *************************/
+
+
+
+
+
+/************************* COMMENT *************************/
+
+.comment-container{
+    width:80%;
+    height:auto;
+    margin:auto;
+    text-align: center;
+}
+
+#posted-comments{
+    width:80%;
+    text-align:center !important;
+    margin:auto;
+}
+
+.comment{
+    margin: 5% 0;
+    text-align: center;
+    display:block;
+}
+
+.comment *{
+    vertical-align: top;
+}
+
+.comment label{
+    display:block;
+    text-align: left;
+}
+
+.vote{
+    min-width:50px;
+    min-height:50px;
+
+    max-width:100px;
+    max-height:100px;
+}
+
+.voting{
+    padding:5px;
+    display:inline-block !important;
+    border:none;
+    cursor:pointer;
+
+}
+
+#upvote{
+    width:100px;
+    height:100px;
+    background-image: url("Images/thumbUp.png");
+    background-size:100px 100px;
+}
+
+#downvote{
+    width:100px;
+    height:100px;
+    background-image: url("Images/thumbDown.png");
+    background-size:100px 100px;
+    display:inline-block !important;
+
+}
+
+#add-vote *{
+    vertical-align: top;
+}
+
+.comment-box{
+    width:40vw;
+    height:100px;
+    resize: none;
+    background:white !important;
+    font-size:16px;
+    padding:10px 15px;
+    margin-left:4%;
+}
+
+#add-vote .comment-box{
+    display:none;
+}
+
+#submit-comment{
+    vertical-align: bottom;
+    margin-top:2%;
+    border-radius:5px;
+    display:none;
+    border:black solid 1px;
+}
+
+.more-comment{
+    
+}
+
+/************************* END OF COMMENTS *************************/
+
+
 
 
 
