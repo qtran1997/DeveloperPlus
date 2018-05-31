@@ -1,6 +1,5 @@
 
 html {
-    overflow-y: scroll;
     height: 100%;
 }
 
@@ -8,17 +7,19 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: "Helvetica", sans-serif;
+    font-family:  "proxima nova,arial,sans-serif";
 }
 
 /************************* NAVBAR *************************/
+.main_nav {
+    background: #C95D63;
+}
 
 .navbar-brand, .navbar ul li a {
     color: #fff;
 }
 
-.nav-link:hover {
-    background: #99C24D;
+.nav-link:hover, .navbar-brand:hover {
     color: #000 !important;
     text-decoration: none;
 }
@@ -40,166 +41,302 @@ body {
     align-items: center;
 }
 
-#cover-caption {
+.cover-caption {
     width: 100%;
-    color: #000 !important;
     text-decoration: none;
 }
 
-/************************* HOME PAGE SECTION A *************************/
-section.middle-a {
-    padding: 2.5rem;
-    border-top: 7px solid #FDB833;
+/************************* COURSES *************************/
+.classes_header {
+    margin-top: 3rem;
 }
 
-section.middle-a h1 {
+.course_top {
+    width: 85%;
+    border: 2px solid #C95D63;
+}
+
+.course_bottom {
+    width: 85%;
+    border: 2px solid #C95D63;
+}
+
+.coursemenu_filter .navbar-nav {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.coursemenu_filter .navbar-nav li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.coursemenu_filter .navbar-nav li a{
+    color: #C95D63;
+    text-transform: uppercase;
+    font-size: 14px;
     font-weight: bold;
+}
+
+.courses {
+    box-sizing: border-box;
+}
+
+.courses img {
+    height: 120px;
+}
+
+.description {
+    margin-top: -30px;
+}
+
+.description p {
+    padding: 0;
+    margin: 0;
+}
+
+.course-sub-heading {
+    opacity: 0.8;
+    font-size: 14px;
+    margin-top: -20px;
+}
+
+.course-sub-heading img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.course-title {
+    font-size: 15px;
+}
+
+
+/************************* GRAY BACKGROUND *************************/
+.grey-background {
+    background-color: #ecf1f1;
+    padding: 3em;
+}
+
+.grey-background h1 {
+    font-size: 25px;
+    opacity: 0.7;
+}
+
+.grey-background i {
+    font-size: 3.5em;
+}
+
+.head-text {
+    font-size: 17px;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-top: 12px;
+}
+
+.content {
+    margin-top: 3%;
+}
+
+/************************* FOOTER BACKGROUND *************************/
+
+#footer-cover {
+    height: 75%;
+    background: url(Images/app2.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+#footer-cover h1 {
+    color: #fff;
+    font-size: 47px;
+    font-weight: bold;
+}
+
+#footer-cover p {
+    font-size: 17px;
+    color: #000;
+    max-width: 30%;
+}
+
+#footer-cover img {
+    height: 50px;
+}
+
+#join-us {
+    width: 30%;
+}
+
+/************************* HOME PAGE SECTION A *************************/
+.middle {
+    padding: 2.5rem 2.5rem 5rem 2.5rem;
+    border-top: 5px solid #FDB833;
+}
+
+.middle .container {
+    margin-top: 2%;
+}
+
+.middle h1 {
+    font-weight: bold;
+    font-size: 32px;
     color: #2E4057;
     margin: 0;
     text-align: center;
 }
 
-section.middle-a img {
+.middle img {
     padding: 1rem;
+    height: 350px;
+    max-width: 550px;
 }
 
-section.middle-a button {
-    background: #F18F01;
+#css-description {
+    margin-top: 3%;
+}
+
+.middle button {
+    background: #C95D63;
     width: 50%;
     color: #fff;
 }
 
-section.middle-a .wrap {
-    width: 100%;
+#wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3% 0;    
 }
 
-section.middle-a .wrap-text {
-    justify-content: center;
-    font-size: 17px;
-}
 
-section.middle-a p {
+.middle p {
     margin: 20px 0 0;
     padding: 0;
     font-size: 1em;
     text-align: center;
 }
 
-/************************* HOME PAGE SECTION B *************************/
-
-section.middle-b {
-    padding: 2.5rem;
-    background: #048BA8;
-}
-
-section.middle-b .ptext {
-    margin: 1rem;
-    color: #fff;
-}
-
-section.middle-b h1 {
-    font-weight: bold;
+#subscribe-form {
+    margin-top: 5%;
     text-align: center;
-    color: #2E4057;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/************************* HOME PAGE SECTION C *************************/
-section.middle-c {
-    border-top: 2px solid #004385;
+#subscribe-form h1 {
+    font-size: 32px;
 }
 
-.sub-button {
-    background: #F18F01;
-    color: #ffffff;
-}
-
-/************************* HOME PAGE SECTION E *************************/
-.middle-e-container {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    margin-bottom: 250px;
-    padding: 1em;
-}
-
-.middle-e-left {
-    border-bottom: 5px solid #F18F01;
-    background: #99C24D;
-    padding: 2em;
-    text-align: center;
-}
-
-.middle-e-left p {
-    margin: 0;
-}
-
-.middle-e-left h2 {
-    color: #fff;
-    font-weight: bold;
-}
-
-.middle-e-right {
-    border-bottom: 5px solid #F18F01;
-    color: #fff;
-    padding: 2em;
-    background: #2E4057;
-}
-
-.middle-e-right h2 {
-    color: #F18F01;
-    text-decoration: underline;
-}
-
-.section-container {
-    display: grid;
-    grid-template-columns: 43% 56%;
-    grid-gap: 2em;
-    padding: 3.5rem;
-}
-
-.section-container h2 {
-    font-size: 25px;
-    font-weight: bold;
-    font-family: 'Catamaran', sans-serif;
-    color: #720026;
-}
-
-.section-container .right-text ul li {
-    padding: 3px;
-}
-
-#tapping {
-    padding-top: 3%;
-    width: 60%;
-    max-height: 550px;
-    margin: 0 20%;
-}
-
-.left-text {
-    max-width: 450px;
-}
-
-.right-text {
-    max-width: 600px;
-}
-
-.sub-heading {
-    margin: 0;
-    font-weight: bold;
+#subscribe-form p {
     font-size: 20px;
-    text-transform: uppercase;
 }
+
+.subscribe input {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.subscribe-button {
+    background: #C95D63;
+    color: #fff;
+    width: 60%;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/************************* MEDIA QUERIES FOR HOME PAGE *************************/
+/*
+@media screen and (max-width: 990px) {
+    #footer-cover h1 {
+        font-size: 32px;
+    }
+
+    #footer-cover p {
+        max-width: 100%;
+    }
+
+    #subscribe-form h1 {
+        font-size: 27px;
+    }
+
+    #subscribe-form p {
+        font-size: 16px;
+    }
+
+    .subscribe-button {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .welcome-text {
+        font-size: 55px;
+    }
+
+}
+*/
+
+/*
+@media screen and (max-width: 769px) {
+    #join-us {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .grey-background .content {
+        margin-top: 10px;
+    }
+
+    .grey-background .content .sub-text {
+        font-size: 15px;
+    }
+}
+*/
+
+@media screen and (max-width: 460px) {
+    .contact-wrapper {
+        margin: 25px auto 0;
+    }
+
+    .form {
+        font-size: 15px;
+    }
+
+    .top-form .inner-form {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .form-btn {
+        width: 100%;
+        background: green;
+    }
+}
+
+/*
+@media screen and (max-width: 541px) {
+
+    
+    .welcome-text {
+    font-size: 47px;
+}
+    
+}
+*/
 
 /************************* FOOTER *************************/
 section.footer {
+    margin: 250px 0 0 0;
     padding: 25px 0;
     position: relative;
     background: #2F2D2E;
     color: #000;
-    border-top: 3px solid #99C24D;
+    border-top: 3px solid #C95D63;
     bottom: 0;
     left:0;
 }
@@ -216,20 +353,6 @@ section.footer h1 {
 section.footer p {
     color: #fff;
     margin: 0;
-}
-
-section.footer button {
-    margin-top: 5px;
-    width: 100%;
-    background: #cb2027;
-    border: #000;
-    text-transform: uppercase;
-    opacity: 0.8;
-}
-
-section.footer button:hover {
-    background: #cb2027;
-    opacity: 1;
 }
 
 section.footer a {
@@ -292,7 +415,7 @@ section.footer .bottom-footer h3{
 }
 
 /* Select children in range of 2 - 6 inclusive */
-#sidebar ul li:nth-child(n+2):nth-child(-n+6):hover {
+#sidebar ul li:nth-child(n+1):nth-child(-n+6):hover {
     background: rgba(230,230,230,.3);
 }
 
@@ -318,7 +441,7 @@ section.footer .bottom-footer h3{
 }
 
 .video-menu {
-    background: #2E4057;
+    background: #496DDB;
     border-left: 1px solid #C0C0C0;
     padding-top: 2em;
     overflow-y: auto;    
@@ -347,99 +470,111 @@ section.footer .bottom-footer h3{
 
 
 
-/************************* CONTACT *************************/
-
-#contact-page {
+/************************* CONTACT PAGE *************************/
+.contact-wrapper > * {
     margin: 0;
     padding: 0;
 }
 
-.contact-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: #fff;
-    padding: 40px;
-    box-sizing: border-box;
-    border: 1px solid rgba(0,0,0,.1);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+.contact-wrapper {
+    width: 100%;
+    max-width: 680px;
+    margin: 50px auto 0;
+    padding: 20px;
 }
 
-.contact-box h2 {
-    margin: 0 0 40px;
+.contact-content {
+    text-align: center;
+    margin: 0;
     padding: 0;
-    color: #f7497d;
+}
+
+.contact-content p {
+    font-size: 18px;
+    padding: 0;
+    margin-top: -10px;
+    opacity: 0.8;
+}
+
+#contact-bottom {
+    margin-top: -8px;
+    width: 65%;
+    border: 1px solid #C95D63;
+}
+
+.form {
+    font-size: 13px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.top-form, .middle-form, .bottom-form {
+    width: 100%;
+    min-height: 65px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    padding: 15px 5px;
+    border-color: black;
+    width: 100%;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+    border-color: red;
+}
+
+.top-form .inner-form {
+    width: 29.9%;
+    float: left;
+    margin-right: 5%;
+}
+
+.top-form .inner-form:last-child {
+    margin-right: 0;
+}
+
+.middle-form {
+    clear: both;
+}
+
+.bottom-form textarea {
+    height: 220px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.form-btn {
+    background: #C95D63;
+    color: #fff;
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    font-size: 11px;
     text-transform: uppercase;
 }
 
-.contact-box input {
-    padding: 10px 0;
-    margin-bottom: 30px;
+::-moz-input-placeholder {
+    font-size: 11px;
+    text-transform: uppercase;
 }
 
-.contact-box textarea {
-    height: 80px;
-    padding: 10px 0;
-    margin-bottom: 40px;
+::-ms-input-placeholder {
+    font-size: 11px;
+    text-transform: uppercase;
 }
-
-.contact-box input, .contact-box textarea {
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: none;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #999;
-}
-
-/*
-.contact-box textarea {
-margin-bottom: 20px;
-}
-
-.contact-box[type="submit"] {
-border-bottom: none;
-cursor: pointer;
-background: #f7497d;
-color: #fff;
-margin-bottom: 0;
-text-transform: uppercase;
-}
-
-.contact-box form div {
-position: relative;
-}
-
-contact-box form div label {
-position: absolute;
-top: -10px;
-left: 0;
-color: #999;
-transition: .5s;
-pointer-events: none;
-}
-
-.contact-box input:focus ~ label,
-.contact-box textarea:focus ~ label,
-.contact-box input:valid ~ label,
-.contact-box textarea:valid ~ label{
-top: -12px;
-left: 0;
-color: #f7497d;
-font-size: 12px;
-font-weight: bold;
-}
-
-.contact-box input:focus,
-.contact-box textarea:focus,
-.contact-box input:valid,
-.contact-box textarea:valid {
-border-bottom: 2px solid #f7497d;
-}
-*/
-
 
 /************************* END OF CONTACT *************************/
 
@@ -462,7 +597,7 @@ border-bottom: 2px solid #f7497d;
     color: #fff;
     font-size: 17px;
     text-transform: uppercase;
-    background: #005b96;
+    background: #496DDB;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -498,7 +633,7 @@ border-bottom: 2px solid #f7497d;
 }
 
 .contact form input {
-    background: #d3d3d3;
+    background: #ecf1f1;
     border-radius: 6px;
     border: none;
     font-size: 15px;
@@ -506,9 +641,9 @@ border-bottom: 2px solid #f7497d;
 }
 
 .contact form input:focus {
-    background: #eee;
+    background: #fff;
     transition: 1s;
-    outline-color: #71eeb8;
+    outline-color: #496DDB;
     opacity: 1;
 }
 
@@ -540,7 +675,7 @@ border-bottom: 2px solid #f7497d;
     width: 100%;
     height: 35px;
     font-size: 15px;
-    background: #005b96;
+    background: #496DDB;
     color: #fff;
     border: 0;
     text-transform: uppercase;
@@ -549,7 +684,7 @@ border-bottom: 2px solid #f7497d;
 #signin-footer {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background: #005b96;
+    background: #496DDB;
     color: #fff;
     text-align: center;
 }

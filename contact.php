@@ -20,7 +20,7 @@ session_start();
 
     </head>
 
-    <body id="#contact-page">
+    <body>
 
         <!-- NAVBAR -->
         <div class="nav-wrapper">
@@ -34,35 +34,47 @@ session_start();
             ?>
         </div>
 
-        <div class="contact-box">
-            <h2>Contact Us</h2>
-            <form>
-                <div>
-                    <input type="text" name="" required>
-                    <label for="">Name</label>
+        <div class="contact-wrapper">
+            <div class="contact-content">
+                <h1>Contact Us</h1>
+                <hr id="contact-bottom">
+                <p>Send us a Message! We'd love to help!</p>
+            </div>
+            <div class="form">
+                <div class="top-form">
+                    <div class="inner-form">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="inner-form">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="inner-form">
+                        <input type="text" placeholder="Phone Number" required>
+                    </div>
                 </div>
-                <div>
-                    <input type="email" name="" required>
-                    <label for="">Email Address</label>
+                <div class="middle-form">
+                    <div class="inner-form">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
                 </div>
-                <div>
-                    <textarea name="" id="" required></textarea>
-                    <label>Message</label>
+                <div class="bottom-form">
+                    <div class="inner-form">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
                 </div>
-                <input type="submit" name="" value="Submit">
-            </form>
+                <div class="btn form-btn">Send</div>
+            </div>
         </div>
 
 
 
 
-        <!--
-<section class="footer">
-<?php  
-include 'footer.php';
-?>
-</section>
--->
+        <section class="footer">
+            <?php  
+            include 'footer.php';
+            ?>
+        </section>
+
 
 
     </body>
