@@ -2,7 +2,6 @@ $(document).ready(function() {
     var currentVideo = 1;
     var changeVideo = "video" + currentVideo.toString();
 
-
     $('#video1').on('click', function() {
         videos['video1']();
     });

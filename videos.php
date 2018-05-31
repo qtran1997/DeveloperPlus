@@ -42,12 +42,12 @@ session_start();
         <div class="video-container">
             <div class="video-header">
                 <span>
-                    <span class="previous" style="float:left";>
+                    <span class="previous" style="float:left">
                         <i class="fas fa-arrow-circle-left"></i>
                         Previous Lesson
                     </span>
 
-                    <span class="next" style="float:right";>
+                    <span class="next" style="float:right">
                         Next Lesson
                         <i class="fas fa-arrow-circle-right"></i>
                     </span>
@@ -269,38 +269,54 @@ session_start();
 </p>    
 </div>
 -->
+
                 <?php 
-                include "loginsystem/dbh.php";
+                include "./loginsystem/dbh.php";
+                addcomments(); 
 
-                for ($i = 1; $i <= 5; $i++) {
-
-                    $sql = "SELECT * FROM commentsystem WHERE id='$i'";
-                    $result = mysqli_query($conn, $sql);
-                    $row = mysqli_fetch_assoc($result);
-                    $fname = $row['fname'];
-                    $comment = $row['comment'];
-                    $rating = "thumbUp.png";
-                    $date = substr($row['date'], 0, 10);
-                    $vote = "upvote";
-                    if($row['rating'] == 1) {
-                        $rating = "thumbUp.png";
-                        $vote = "upvote";
+                function addcomments() {
+                    include "./loginsystem/dbh.php";
+                    if(isset($_POST['amount'])) {
+                        $amount = $_POST['amount'];
                     }
                     else {
-                        $rating = "thumbDown.png";
-                        $vote = "downvote";
+                        $amount = 0;
                     }
+                    for ($i = 1; $i <= $amount+5; $i++) {
 
-                    echo '<div class="comment">
+                        $sql = "SELECT * FROM commentsystem WHERE id='$i'";
+                        $result = mysqli_query($conn, $sql);
+                        $row = mysqli_fetch_assoc($result);
+                        $fname = $row['fname'];
+                        $comment = $row['comment'];
+                        $rating = "thumbUp.png";
+                        $date = substr($row['date'], 0, 10);
+                        $vote = "upvote";
+                        if($row['rating'] == 1) {
+                            $rating = "thumbUp.png";
+                            $vote = "upvote";
+                        }
+                        else {
+                            $rating = "thumbDown.png";
+                            $vote = "downvote";
+                        }
+
+                        echo '<div class="comment posted-comment">
                     <p>
                         <label for="comment-box" style="display:inline-block; width:100px;">' . $fname . '<br>' . $date .'</label>
-                        <img id="' . $vote . '" src="Images/' . $rating . '">
+                        <img id="' . $vote . '" src="./Images/' . $rating . '">
                         <textarea name="comment-box" class="comment-box" disabled>' . $comment . '</textarea>
                     </p>    
                 </div>';
+                    }
                 }
+
+
                 ?>
-                <button class="more-comments" type="button">read more</button>
+                <form action="videos.php?comments=5" method="post">
+                    <input name="amount" value="5" hidden>
+                    <button class="more-comments" type="submit">read more</button>
+                </form>
             </div>
             <hr class="w-100 clearfix">
             <h3>Add your own comment!</h3>

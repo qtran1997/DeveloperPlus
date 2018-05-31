@@ -536,17 +536,17 @@ section.footer .bottom-footer h3{
 }
 
 #upvote{
-    width:100px;
-    height:100px;
+    width:100px !important;
+    height:100px !important;
     background-image: url("Images/thumbUp.png");
-    background-size:100px 100px;
+    background-size:100px 100px !important;
 }
 
 #downvote{
-    width:100px;
-    height:100px;
+    width:100px !important;
+    height:100px !important;
     background-image: url("Images/thumbDown.png");
-    background-size:100px 100px;
+    background-size:100px 100px !important;
     display:inline-block !important;
 
 }
