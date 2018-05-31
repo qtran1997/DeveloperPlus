@@ -23,7 +23,7 @@ session_start();
 
         <link rel="stylesheet" type="text/css" href="index.css"> 
 
-        <title>Sheek Ticker</title>
+        <title>Developer+</title>
 
     </head>
     <body>
@@ -44,154 +44,225 @@ session_start();
 
         <!-- THE TOP SECTION CONSISTING OF THE COVER PHOTO -->
         <section id="cover">
-            <div id="cover-caption">
+            <div class="cover-caption">
                 <div class="container">
                     <div class="col-sm-10 offset-sm-1">
-                        <h1 class="display-1">Welcome to CSS</h1>
-                        <p>A brief introduction to CSS.</p>
-                        <a href="#classes_offered" class="btn btn-outline-secondary btn-sm" role="button" id="down_arrow">&darr;</a>
+                        <h1 class="display-1 welcome-text">Welcome to CSS</h1>
+                        <a href="#classes_offered" class="btn btn-outline-warning btn-sm" role="button" id="down_arrow">&darr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--
-<div class="row">
-<div class="card" style="width: 18rem;">
-<img class="card-img-top" src="Images/html_icon.png" alt="Card image cap">
-<div class="card-body">
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-</div>
-</div>
-<div class="card" style="width: 18rem;">
-<img class="card-img-top" src="Images/css_icon.png" alt="Card image cap">
-<div class="card-body">
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-</div>
-</div>
-<div class="card" style="width: 18rem;">
-<img class="card-img-top" src="Images/bootstrap.png" alt="Card image cap">
-<div class="card-body">
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-</div>
-</div>
-</div>
--->
+        <div class="container text-center classes_header" id="classes_offered"> 
+            <h1>Our Courses</h1>
+            <hr class="course_bottom">
+        </div>
 
-        <!-- THE MIDDLE SECTION CONSISTS OF ALL THE CONTENT ON THE PAGE, SPLIT INTO MULTIPLE SUB-SECTIONS -->
+        <div class="coursemenu_filter">
+
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">All Courses <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CSS3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">HTML5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bootstrap4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Design</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Business</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container text-center pt-2 courses">
+            <div class="row">
+                <div class="col-4">
+                    <img src="Images/css_icon.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="Images/html_icon.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="Images/bootstrap.png" class="img-fluid" alt="">
+                </div>
+            </div>       
+        </div>
+
+        <div class="container text-center description">
+            <div class="row py-5">
+                <div class="col-4">
+                    <div class="course-sub-heading">
+                        <img src="Images/lake.jpeg" alt="">
+                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+                    </div>
+                    <p class="course-title"><strong>Mastering CSS. <br> A Brief Introduction</strong></p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="col-4">
+                    <div class="course-sub-heading">
+                        <img src="Images/lake.jpeg" alt="">
+                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+                    </div>
+                    <p class="course-title"><strong>Mastering HTML. <br> A Brief Introduction</strong></p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="col-4">
+                    <div class="course-sub-heading">
+                        <img src="Images/lake.jpeg" alt="">
+                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+                    </div>
+                    <p class="course-title"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center pt-2 courses">
+            <div class="row">
+                <div class="col-4">
+                    <img src="Images/css_icon.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="Images/html_icon.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="Images/bootstrap.png" class="img-fluid" alt="">
+                </div>
+            </div>       
+        </div>
+
+        <div class="container text-center description">
+            <div class="row py-5">
+                <div class="col-4">
+                    <div class="course-sub-heading">
+                        <img src="Images/lake.jpeg" alt="">
+                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+                    </div>
+                    <p class="course-title"><strong>Mastering CSS. <br> A Brief Introduction</strong></p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="col-4">
+                    <div class="course-sub-heading">
+                        <img src="Images/shore.jpeg" alt="">
+                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+                    </div>
+                    <p class="course-title"><strong>Mastering HTML. <br> A Brief Introduction</strong></p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="col-4">
+                    <div class="course-sub-heading">
+                        <img src="Images/lake.jpeg" alt="">
+                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+                    </div>
+                    <p class="course-title"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
 
 
-        <section class="middle-a">
+        <div class="middle">
             <div>
-                <hr class="w-100 clearfix d-md-none">
-                <h1>Innovation at your Fingertips</h1>
-                <hr class="w-100 clearfix d-md-none">
+                <h1>Design Beautiful Websites From Scratch</h1>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
-                        <img src="Images/tapping.jpg" class="img-responsive col-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="Images/website.jpeg" alt="">
                     </div>
-                    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 wrap-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum, dignissimos quos officia quas consequuntur. Delectus rem pariatur dolor perferendis, nemo, praesentium libero eius debitis incidunt qui asperiores officiis similique.</p>
-                        <div class="wrap">
-                            <button class="btn">CLICK ME</button>
+                    <div class="col-lg-6 col-md-12 col-sm-12" id="css-description">
+                        <h2 class="text-center">SHEEK MEDIA</h2>
+                        <ul>
+                            <li>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
+                            </li>
+                            <li>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
+                            </li>
+                            <li>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
+                            </li>
+                        </ul>
+                        <div id="wrapper">
+                            <button type="button">LETS BEGIN</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- -->
+        <div class="grey-background">
+            <div class="container text-center "> 
+                <h1>Why Developer+ ?</h1>
+            </div>
+            <div class="container text-center content">
                 <div class="row">
-                    <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 wrap-text">
-                        <img src="Images/peopletapping.jpeg" class="img-responsive col-12">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <i class="fas fa-desktop"></i>
+                        <p class="head-text">Design Appealing Websites</p>
+                        <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
-                    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 wrap-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum, dignissimos quos officia quas consequuntur. Delectus rem pariatur dolor perferendis, nemo, praesentium libero eius debitis incidunt qui asperiores officiis similique.</p>
-                        <div class="wrap">
-                            <button class="btn">CLICK ME</button>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <i class="far fa-smile"></i>
+                        <p class="head-text">Produce Happy Customers</p>
+                        <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                        <i class="fas fa-chart-line"></i>
+                        <p class="head-text">Expand Your Business</p>
+                        <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>       
+            </div>
+        </div>
+
+        <div id="footer-cover">
+            <div class="cover-caption">
+                <div class="container">
+                    <div class="col-sm-10 offset-sm-1">
+                        <h1>Learn on the Go!</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure, neque, adipisci dicta harum similique consequuntur repellat.</p>
+                        <img src="Images/download.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="subscribe-form">
+            <div class="container">
+                <div class="col-sm-10 offset-sm-1">
+                    <h1 class="text-center"><strong>The Online Learning Experience Built Just For You</strong>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, sunt! Dolorum qui dolor maiores aperiam illo nemo voluptates iste magnam.</p></h1>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 subscribe">
+                                <input type="email" placeholder="Email Address">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <button type="button" class="subscribe-button">Subscribe</button>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="middle-b">
-
-            <hr class="w-100 clearfix d-md-none">
-            <h1 id="section-middle-second-header">Temp Text</h1>
-            <hr class="w-100 clearfix d-md-none">
-            <div class="ptext">
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt a assumenda quos, repellat sapiente aut enim, corporis commodi earum rerum quidem, vitae aspernatur et eos non, nemo soluta cum qui error neque porro veritatis ad adipisci amet! Iure dolores nihil magnam sapiente maiores modi repudiandae deleniti. Iusto maxime, est. Vel corporis natus reprehenderit iusto est impedit in adipisci aliquid voluptatum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt a assumenda quos, repellat sapiente aut enim, corporis commodi earum rerum quidem, vitae aspernatur et eos non, nemo soluta cum qui error neque porro veritatis ad adipisci amet! Iure dolores nihil magnam sapiente maiores modi repudiandae deleniti. Iusto maxime, est. Vel corporis natus reprehenderit iusto est impedit in adipisci aliquid voluptatum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt a assumenda quos, repellat sapiente aut enim, corporis commodi earum rerum quidem, vitae aspernatur et eos non, nemo soluta cum qui error neque porro veritatis ad adipisci amet! Iure dolores nihil magnam sapiente maiores modi repudiandae deleniti. Iusto maxime, est. Vel corporis natus reprehenderit iusto est impedit in adipisci aliquid voluptatum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt a assumenda quos, repellat sapiente aut enim, corporis commodi earum rerum quidem, vitae aspernatur et eos non, nemo soluta cum qui error neque porro veritatis ad adipisci amet! Iure dolores nihil magnam sapiente maiores modi repudiandae deleniti. Iusto maxime, est. Vel corporis natus reprehenderit iusto est impedit in adipisci aliquid voluptatum.</p>
-            </div>
-        </section>
-
-        <section class="middle-c">
-            <div class="section-container">
-                <div class="left-text">
-                    <h2>Left Text</h2>
-                    <p class="sub-heading">What You Need to Become Awesome</p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deserunt reprehenderit ab illo itaque iusto obcaecati eveniet repellat incidunt autem.
-                    <br>
-                    <br>
-                    <p> <button class="btn sub-button">HELLO WORLD</button></p>
-                </div>
-                <div class="right-text">
-                    <h2>Right Text</h2>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, non! Odit blanditiis ea exercitationem, neque quos laudantium reprehenderit tempore hic!</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, non! Odit blanditiis ea exercitationem, neque quos laudantium reprehenderit tempore hic!</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, non! Odit blanditiis ea exercitationem, neque quos laudantium reprehenderit tempore hic!</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="photo">
-                <img src="Images/peopletapping.jpeg" class="img-responsive" alt="" id="tapping">
-            </div>
-        </section>
-
-        <section class="middle-d">
-            <div class="section-container">
-                <div class="left-text">
-                    <h2>Left Text</h2>
-                    <p class="sub-heading">Outwork the Competition</p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deserunt reprehenderit ab illo itaque iusto obcaecati eveniet repellat incidunt autem.
-                    <br>
-                    <br>
-                    <p> <button class="btn sub-button">HELLO WORLD</button></p>
-                </div>
-                <div class="right-text">
-                    <h2>Right Text</h2>
-                    <p>A website is the first essential of any profitable passive income business done online.</p>
-                    <p>There are a few free options like Blogger, Tumblr, or WordPress.com. Those are great options for some, but I don’t recommend that path for three important reasons:</p>
-                    <ul>
-                        <li>When you use a free service, your domain name will almost always be an “extra” extension to the service provider’s own domain. For example, if I created SPI on Tumblr, the web address would be http://smartpassiveincome.tumblr.com instead of https://www.smartpassiveincome.com.</li>
-                        <li>You have fewer customization options for design, functionality, and revenue. For example, I know that with free WordPress.com sites, you are limited to using only certain plugins, and you aren’t even allowed to advertise.</li>
-                        <li>When you build your business on someone else’s platform, your business is vulnerable to any changes they might make. For example, if Tumblr closed tomorrow, you would lose your business entirely.</li>
-                    </ul>
-                    <p>These three reasons alone are exactly why I recommend going with a self-hosted website. You have more control, it looks more professional, and you can truly call it your own.</p>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="middle-e">
-            <div class="middle-e-container">
-                <div class="middle-e-left">
-                    <h2>Temp Text</h2>
-                    <br>
-                    <p>click clack click</p>
-                    <p>purchase today</p>
-                    <br>
-                    <a href="checkout.php"><button class="btn sub-button">Click to buy</button></a> 
-                </div>
-                <div class="middle-e-right">
-                    <h2> The Number 1 Trusted Product in the Market</h2>
-                    <p>I’ve used Bluehost since the beginning and trust them implicitly. I love their customer support and reliability. I’ve even been to their headquarters in Utah just to make sure they were on top of things. [Full Disclosure: As an affiliate, I receive compensation if you purchase through this link.]</p>
-                    <p>I hear horror stories all the time from other online entrepreneurs dealing with massive hosting headaches. Thankfully, I never have them with Bluehost. Bluehost just works, which gives me amazing peace of mind!</p>
-                    <p>I highly recommend using Bluehost for your first website, and you can get started now at $2.75/month, which is an exclusive deal only available here on SPI! </p>
-
+                    </form>
                 </div>
             </div>
         </section>
@@ -200,11 +271,7 @@ session_start();
             <?php  
             include 'footer.php';
             ?>
-
         </section>
-
-
-
 
 
         <!-- Optional JavaScript -->
