@@ -46,10 +46,8 @@ session_start();
         <section id="cover">
             <div class="cover-caption">
                 <div class="container">
-                    <div class="col-sm-10 offset-sm-1">
-                        <h1 class="display-1 welcome-text">Welcome to CSS</h1>
-                        <a href="#classes_offered" class="btn btn-outline-warning btn-sm" role="button" id="down_arrow">&darr;</a>
-                    </div>
+                    <h1 class="welcome-text">Welcome to CSS</h1>
+                    <a href="#classes_offered" class="btn btn-outline-warning btn-sm" role="button" id="down_arrow">&darr;</a>
                 </div>
             </div>
         </section>
@@ -93,7 +91,9 @@ session_start();
             </nav>
         </div>
 
-        <div class="container text-center pt-2 courses">
+        <!-- COURSE SELECTIONS --> 
+
+        <div class="container text-center courses">
             <div class="row">
                 <div class="col-4">
                     <img src="Images/css_icon.png" class="img-fluid" alt="">
@@ -107,77 +107,100 @@ session_start();
             </div>       
         </div>
 
-        <div class="container text-center description">
-            <div class="row py-5">
-                <div class="col-4">
-                    <div class="course-sub-heading">
-                        <img src="Images/lake.jpeg" alt="">
+        <div class="container text-center courses">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="row">
+                    <div class="course">
+                        <img src="Images/css_icon.png" alt="" class="img-fluid">
                         +32,807 Students <i class="far fa-clock"> 1h 10m</i>
                     </div>
-                    <p class="course-title"><strong>Mastering CSS. <br> A Brief Introduction</strong></p>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="col-4">
-                    <div class="course-sub-heading">
-                        <img src="Images/lake.jpeg" alt="">
+                    <div class="course">
+                        <img src="Images/css_icon.png" alt="" class="img-fluid">
                         +32,807 Students <i class="far fa-clock"> 1h 10m</i>
                     </div>
-                    <p class="course-title"><strong>Mastering HTML. <br> A Brief Introduction</strong></p>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="col-4">
-                    <div class="course-sub-heading">
-                        <img src="Images/lake.jpeg" alt="">
+                    <div class="course">
+                        <img src="Images/css_icon.png" alt="" class="img-fluid">
                         +32,807 Students <i class="far fa-clock"> 1h 10m</i>
                     </div>
-                    <p class="course-title"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></p>
-                    <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
         </div>
 
-        <div class="container text-center pt-2 courses">
-            <div class="row">
-                <div class="col-4">
-                    <img src="Images/css_icon.png" class="img-fluid" alt="">
-                </div>
-                <div class="col-4">
-                    <img src="Images/html_icon.png" class="img-fluid" alt="">
-                </div>
-                <div class="col-4">
-                    <img src="Images/bootstrap.png" class="img-fluid" alt="">
-                </div>
-            </div>       
-        </div>
+        <!--
+<div class="container text-center description">
+<div class="row py-5">
+<div class="col-4">
+<div class="course-sub-heading">
+<img src="Images/lake.jpeg" alt="">
++32,807 Students <i class="far fa-clock"> 1h 10m</i>
+</div>
+<p class="course-title"><strong>Mastering CSS. <br> A Brief Introduction</strong></p>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+<div class="col-4">
+<div class="course-sub-heading">
+<img src="Images/lake.jpeg" alt="">
++32,807 Students <i class="far fa-clock"> 1h 10m</i>
+</div>
+<p class="course-title"><strong>Mastering HTML. <br> A Brief Introduction</strong></p>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+<div class="col-4">
+<div class="course-sub-heading">
+<img src="Images/lake.jpeg" alt="">
++32,807 Students <i class="far fa-clock"> 1h 10m</i>
+</div>
+<p class="course-title"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></p>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+</div>
+</div>
+-->
 
-        <div class="container text-center description">
-            <div class="row py-5">
-                <div class="col-4">
-                    <div class="course-sub-heading">
-                        <img src="Images/lake.jpeg" alt="">
-                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
-                    </div>
-                    <p class="course-title"><strong>Mastering CSS. <br> A Brief Introduction</strong></p>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="col-4">
-                    <div class="course-sub-heading">
-                        <img src="Images/shore.jpeg" alt="">
-                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
-                    </div>
-                    <p class="course-title"><strong>Mastering HTML. <br> A Brief Introduction</strong></p>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="col-4">
-                    <div class="course-sub-heading">
-                        <img src="Images/lake.jpeg" alt="">
-                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
-                    </div>
-                    <p class="course-title"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></p>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-        </div>
+        <!--
+<div class="container text-center pt-2 courses">
+<div class="row">
+<div class="col-4">
+<img src="Images/css_icon.png" class="img-fluid" alt="">
+</div>
+<div class="col-4">
+<img src="Images/html_icon.png" class="img-fluid" alt="">
+</div>
+<div class="col-4">
+<img src="Images/bootstrap.png" class="img-fluid" alt="">
+</div>
+</div>       
+</div>
+
+<div class="container text-center description">
+<div class="row py-5">
+<div class="col-4">
+<div class="course-sub-heading">
+<img src="Images/lake.jpeg" alt="">
++32,807 Students <i class="far fa-clock"> 1h 10m</i>
+</div>
+<p class="course-title"><strong>Mastering CSS. <br> A Brief Introduction</strong></p>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+<div class="col-4">
+<div class="course-sub-heading">
+<img src="Images/shore.jpeg" alt="">
++32,807 Students <i class="far fa-clock"> 1h 10m</i>
+</div>
+<p class="course-title"><strong>Mastering HTML. <br> A Brief Introduction</strong></p>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+<div class="col-4">
+<div class="course-sub-heading">
+<img src="Images/lake.jpeg" alt="">
++32,807 Students <i class="far fa-clock"> 1h 10m</i>
+</div>
+<p class="course-title"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></p>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+</div>
+</div>
+-->
 
 
         <div class="middle">
@@ -190,7 +213,7 @@ session_start();
                         <img src="Images/website.jpeg" alt="">
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12" id="css-description">
-                        <h2 class="text-center">SHEEK MEDIA</h2>
+                        <h2 class="text-center">LOREM</h2>
                         <ul>
                             <li>
                                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
@@ -210,9 +233,9 @@ session_start();
             </div>
         </div>
 
-        <!-- -->
+        <!-- GRAY BACKGROUND-->
         <div class="grey-background">
-            <div class="container text-center "> 
+            <div class="container text-center"> 
                 <h1>Why Developer+ ?</h1>
             </div>
             <div class="container text-center content">
@@ -252,7 +275,7 @@ session_start();
             <div class="container">
                 <div class="col-sm-10 offset-sm-1">
                     <h1 class="text-center"><strong>The Online Learning Experience Built Just For You</strong>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, sunt! Dolorum qui dolor maiores aperiam illo nemo voluptates iste magnam.</p></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, sunt! Dolorum qui dolor maiores aperiam illo nemo voluptates iste magnam.</p></h1>
                     <form>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12 subscribe">

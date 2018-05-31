@@ -1,8 +1,7 @@
-
 html {
-    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -35,7 +34,7 @@ body {
     background-size: cover;
     background-position: center;
     color: #fff;
-    height: 100%;
+    height: 100vh;
     text-align: center;
     display: flex;
     align-items: center;
@@ -44,6 +43,10 @@ body {
 .cover-caption {
     width: 100%;
     text-decoration: none;
+}
+
+.welcome-text {
+    font-size: 52px;
 }
 
 /************************* COURSES *************************/
@@ -114,6 +117,61 @@ body {
     font-size: 15px;
 }
 
+/************************* DESIGN WEBSITES *************************/
+.middle {
+    padding: 2.5rem 2.5rem 5rem;
+    border-top: 5px solid #FDB833;
+}
+
+.middle .container {
+    margin-top: 2%;
+}
+
+.middle h1 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #2E4057;
+    margin: 0;
+    text-align: center;
+}
+
+.middle h2 {
+    font-size: 20px;
+    float: left;
+    
+}
+
+.middle ul li {
+    list-style: none;
+}
+
+.middle img {
+    height: 300px;
+    width: 310px;
+}
+
+#css-description {
+    margin-top: 3%;
+}
+
+.middle button {
+    background: #C95D63;
+    width: 70%;
+    color: #fff;
+}
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle p {
+    margin: 20px 0 0;
+    padding: 0;
+    font-size: 1em;
+    text-align: center;
+}
 
 /************************* GRAY BACKGROUND *************************/
 .grey-background {
@@ -138,91 +196,41 @@ body {
 }
 
 .content {
-    margin-top: 3%;
+    margin-top: 30px;
 }
 
-/************************* FOOTER BACKGROUND *************************/
 
+/************************* FOOTER BACKGROUND *************************/
 #footer-cover {
-    height: 75%;
+    height: 50vh;
     background: url(Images/app2.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     text-align: left;
     display: flex;
     align-items: center;
+    padding: 1em;
 }
 
 #footer-cover h1 {
     color: #fff;
-    font-size: 47px;
+    font-size: 39px;
     font-weight: bold;
 }
 
 #footer-cover p {
-    font-size: 17px;
+    font-size: 15px;
     color: #000;
-    max-width: 30%;
+    max-width: 80%;
 }
 
 #footer-cover img {
-    height: 50px;
+    height: 40px;
 }
 
-#join-us {
-    width: 30%;
-}
-
-/************************* HOME PAGE SECTION A *************************/
-.middle {
-    padding: 2.5rem 2.5rem 5rem 2.5rem;
-    border-top: 5px solid #FDB833;
-}
-
-.middle .container {
-    margin-top: 2%;
-}
-
-.middle h1 {
-    font-weight: bold;
-    font-size: 32px;
-    color: #2E4057;
-    margin: 0;
-    text-align: center;
-}
-
-.middle img {
-    padding: 1rem;
-    height: 350px;
-    max-width: 550px;
-}
-
-#css-description {
-    margin-top: 3%;
-}
-
-.middle button {
-    background: #C95D63;
-    width: 50%;
-    color: #fff;
-}
-
-#wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.middle p {
-    margin: 20px 0 0;
-    padding: 0;
-    font-size: 1em;
-    text-align: center;
-}
-
+/************************* SUBSCRIBE FORM *************************/
 #subscribe-form {
-    margin-top: 5%;
+    margin-top: 10%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -230,11 +238,11 @@ body {
 }
 
 #subscribe-form h1 {
-    font-size: 32px;
+    font-size: 23px;
 }
 
 #subscribe-form p {
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .subscribe input {
@@ -245,93 +253,15 @@ body {
 .subscribe-button {
     background: #C95D63;
     color: #fff;
-    width: 60%;
+    width: 100%;
+    margin-top: 10px;
     padding: 10px 0;
     cursor: pointer;
 }
 
-/************************* MEDIA QUERIES FOR HOME PAGE *************************/
-/*
-@media screen and (max-width: 990px) {
-    #footer-cover h1 {
-        font-size: 32px;
-    }
-
-    #footer-cover p {
-        max-width: 100%;
-    }
-
-    #subscribe-form h1 {
-        font-size: 27px;
-    }
-
-    #subscribe-form p {
-        font-size: 16px;
-    }
-
-    .subscribe-button {
-        width: 100%;
-        margin-top: 6px;
-    }
-
-    .welcome-text {
-        font-size: 55px;
-    }
-
-}
-*/
-
-/*
-@media screen and (max-width: 769px) {
-    #join-us {
-        width: 100%;
-        margin-top: 5px;
-    }
-
-    .grey-background .content {
-        margin-top: 10px;
-    }
-
-    .grey-background .content .sub-text {
-        font-size: 15px;
-    }
-}
-*/
-
-@media screen and (max-width: 460px) {
-    .contact-wrapper {
-        margin: 25px auto 0;
-    }
-
-    .form {
-        font-size: 15px;
-    }
-
-    .top-form .inner-form {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .form-btn {
-        width: 100%;
-        background: green;
-    }
-}
-
-/*
-@media screen and (max-width: 541px) {
-
-    
-    .welcome-text {
-    font-size: 47px;
-}
-    
-}
-*/
-
 /************************* FOOTER *************************/
 section.footer {
-    margin: 250px 0 0 0;
+    margin: 150px 0 0 0;
     padding: 25px 0;
     position: relative;
     background: #2F2D2E;
@@ -370,11 +300,13 @@ section.footer .bottom-footer h3{
     margin: 20px 0;
 }
 
-/************************* VIDEOS *************************/
+/************************* VIDEOS *************************/   
+
+
 .video-container {
     display: grid;
-    grid-template-columns: 1.2fr 4fr;
-    grid-template-rows: 50px 500px 80px;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 50px 500px 40px;
     color: white;
     text-align: center;
     padding: 1em;
@@ -578,7 +510,7 @@ section.footer .bottom-footer h3{
 }
 
 .more-comment{
-    
+
 }
 
 /************************* END OF COMMENTS *************************/
