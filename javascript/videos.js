@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#video1').on('click', function(){
         $('#current-video').removeAttr('src');
-        $('#current-video').attr('src',"https://www.youtube.com/embed/tQx4lutEhok?rel=0&&load_iv_policy=3;controls=1&showinfo=0");
+        $('#current-video').attr('src',"https://www.youtube.com/embed/y2j6r5V67bY?rel=0&&load_iv_policy=3;controls=1&showinfo=0");
     });
     $('#video2').on('click', function(){
         $('#current-video').removeAttr('src');

@@ -14,7 +14,7 @@ session_start();
 
         <link rel="stylesheet" type="text/css" href="index.css">
 
-        <title>CSS Videos</title>
+        <title>HTML Videos</title>
     </head>
 
     <body>
@@ -49,7 +49,7 @@ session_start();
             <div class="video-menu">
                 <div id="sidebar">
                     <nav>
-                        <h3>CSS Videos</h3>
+                        <h3>HTML Videos</h3>
                         <ul class="nav nav-divider nav-stacked">
                             <li id="video1" ><i class="fas fa-play-circle"></i>1. Introduction (3:50)</li>
                             <li 
