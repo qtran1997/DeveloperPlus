@@ -19,10 +19,10 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="login.php">Sign In</a>
+                <a class="nav-link" href="accountpage.php">Hello, <?php echo $_SESSION['fname'] ?></a>
             </li>                  
             <li class="nav-item">
-                <a class="nav-link" href="signup.php">Register</a>
+                <a class="nav-link" href="loginsystem/logoutsubmit.php">LOG OUT</a>
             </li>        
         </ul>        
     </div>
