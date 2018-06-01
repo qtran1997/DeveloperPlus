@@ -60,7 +60,7 @@ session_start();
                     <nav>
                         <h3>CSS Videos</h3>
                         <ul class="nav nav-divider nav-stacked">
-                            <li id="video1" ><i class="fas fa-play-circle"></i>1. Introduction (3:50)</li>
+                            <li id="video1" ><i class="fas fa-play-circle"></i>1. Background Color (3:50)</li>
                             <li 
                                 <?php
                                 if(!isset($_SESSION['id']))
@@ -72,7 +72,7 @@ session_start();
                                     echo 'id="video2"';
                                 }
                                 ?>
-                                ><i class="fas fa-play-circle"></i>2. Clicker Setup (2:43)</li>
+                                ><i class="fas fa-play-circle"></i>2. Font Color (2:43)</li>
                             <li 
                                 <?php
                                 if(!isset($_SESSION['id']))
@@ -91,7 +91,7 @@ session_start();
                                     }
                                 }
                                 ?>
-                                ><i class="fas fa-play-circle"></i>3. Using the Clicker (4:45)</li>
+                                ><i class="fas fa-play-circle"></i>3. Font Size and Font Styles (4:45)</li>
                             <li 
                                 <?php
                                 if(!isset($_SESSION['id']))
@@ -110,7 +110,7 @@ session_start();
                                     }
                                 }
                                 ?>
-                                ><i class="fas fa-play-circle"></i>4. Using the Clicker II (4:32)</li>
+                                ><i class="fas fa-play-circle"></i>4. Borders (4:32)</li>
                             <li 
                                 <?php
                                 if(!isset($_SESSION['id']))
@@ -176,6 +176,7 @@ session_start();
                             <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>30. Guy Leonard (0:42)</li>
                         </ul>
 
+<!--
                         <h3>Sorting Algorithms</h3>
                         <ul class="nav nav-divider nav-stacked">
                             <li><i class="fas fa-play-circle"></i>31. Bubble Sort (3:50)</li>
@@ -193,6 +194,7 @@ session_start();
                             <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>39. Linked Lists (4:32)</li>
                             <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>40. Final Project (0:42)</li>
                         </ul>
+-->
                     </nav>
                 </div>
             </div>

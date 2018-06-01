@@ -10,12 +10,8 @@ body {
 }
 
 /************************* NAVBAR *************************/
-.main_nav {
-    background: #C95D63;
-}
-
 .navbar-brand, .navbar ul li a {
-    color: #fff;
+    color: #000;
 }
 
 .nav-link:hover, .navbar-brand:hover {
@@ -46,10 +42,10 @@ body {
 }
 
 .welcome-text {
-    font-size: 52px;
+    font-size: 50px;
 }
 
-/************************* COURSES *************************/
+/************************* COURSES NAV *************************/
 .classes_header {
     margin-top: 3rem;
 }
@@ -84,37 +80,29 @@ body {
     font-weight: bold;
 }
 
-.courses {
-    box-sizing: border-box;
+/************************* COURSES *************************/
+.card {
+    border: none;
 }
 
-.courses img {
-    height: 120px;
+.course-img {
+    height: 150px;
+    width: 150px;
 }
 
-.description {
-    margin-top: -30px;
-}
-
-.description p {
-    padding: 0;
-    margin: 0;
-}
-
-.course-sub-heading {
-    opacity: 0.8;
-    font-size: 14px;
-    margin-top: -20px;
-}
-
-.course-sub-heading img{
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-}
-
-.course-title {
+.card-subtitle {
     font-size: 15px;
+}
+
+.card-text {
+    margin-top: -20px;
+    padding: 0;
+}
+
+.sub-heading-img {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
 }
 
 /************************* DESIGN WEBSITES *************************/
@@ -137,8 +125,7 @@ body {
 
 .middle h2 {
     font-size: 20px;
-    float: left;
-    
+    margin-top: 15px;
 }
 
 .middle ul li {
@@ -146,8 +133,8 @@ body {
 }
 
 .middle img {
-    height: 300px;
-    width: 310px;
+    height: auto;
+    width: 100%;
 }
 
 #css-description {
@@ -156,8 +143,10 @@ body {
 
 .middle button {
     background: #C95D63;
-    width: 70%;
+    width: 50%;
     color: #fff;
+    padding: 10px 5px;
+    margin-top: 10px;
 }
 
 #wrapper {
@@ -199,7 +188,6 @@ body {
     margin-top: 30px;
 }
 
-
 /************************* FOOTER BACKGROUND *************************/
 #footer-cover {
     height: 50vh;
@@ -228,6 +216,16 @@ body {
     height: 40px;
 }
 
+@media screen and (max-width: 812px) {
+    #footer-cover {
+        height: 65vh;
+    }
+    
+    #footer-cover p { 
+        max-width: 55%;
+    }
+}
+
 /************************* SUBSCRIBE FORM *************************/
 #subscribe-form {
     margin-top: 10%;
@@ -247,7 +245,8 @@ body {
 
 .subscribe input {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 7px;
+    border: 1px solid #000;
 }
 
 .subscribe-button {
@@ -257,6 +256,14 @@ body {
     margin-top: 10px;
     padding: 10px 0;
     cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe-button {
+        margin-top: 0;
+        width: 75%;
+    }
 }
 
 /************************* FOOTER *************************/
@@ -305,8 +312,8 @@ section.footer .bottom-footer h3{
 
 .video-container {
     display: grid;
-    grid-template-columns: 2fr 4fr;
-    grid-template-rows: 50px 500px 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 200px 500px;
     color: white;
     text-align: center;
     padding: 1em;
@@ -330,11 +337,11 @@ section.footer .bottom-footer h3{
     border-bottom: 1px solid #000;
     width: 100%;
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #sidebar .fas {
-    font-size: 20px;
+    font-size: 14px;
     color: #fff;
     padding-right: 6px;
 }
@@ -362,7 +369,6 @@ section.footer .bottom-footer h3{
 
 .previous {
     font-size: 18px;
-    padding-left: 5%;
     margin: 6px;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -417,10 +423,6 @@ section.footer .bottom-footer h3{
 
 /************************* END OF VIDEOS *************************/
 
-
-
-
-
 /************************* COMMENT *************************/
 
 .comment-container{
@@ -454,7 +456,6 @@ section.footer .bottom-footer h3{
 .vote{
     min-width:50px;
     min-height:50px;
-
     max-width:100px;
     max-height:100px;
 }
@@ -515,12 +516,6 @@ section.footer .bottom-footer h3{
 
 /************************* END OF COMMENTS *************************/
 
-
-
-
-
-
-
 /************************* CONTACT PAGE *************************/
 .contact-wrapper > * {
     margin: 0;
@@ -569,17 +564,11 @@ section.footer .bottom-footer h3{
 .form input[type="text"],
 .form input[type="email"],
 .form textarea {
-    padding: 15px 5px;
+    padding: 15px 3px;
     border-color: black;
     width: 100%;
     transition: all 0.2s ease;
     outline: none;
-}
-
-.form input[type="text"]:focus,
-.form input[type="email"]:focus,
-.form textarea:focus {
-    border-color: red;
 }
 
 .top-form .inner-form {
@@ -599,7 +588,7 @@ section.footer .bottom-footer h3{
 .bottom-form textarea {
     height: 220px;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 5px;
 }
 
 .form-btn {
@@ -615,23 +604,38 @@ section.footer .bottom-footer h3{
 ::-webkit-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
+    padding-left: 7px;
 }
 
 ::-moz-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
+    padding-left: 7px;
 }
 
 ::-ms-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
+    padding-left: 7px;
+}
+
+
+@media screen and (max-width: 460px) {
+    .contact-wrapper {
+        margin: 25px auto 0;
+    }
+    
+    .top-form .inner-form {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .form-btn {
+        width: 100%;
+    }
 }
 
 /************************* END OF CONTACT *************************/
-
-
-
-
 
 /************************* LOGIN/SIGNUP *************************/
 .container-form {
@@ -759,8 +763,6 @@ section.footer .bottom-footer h3{
 /************************* END OF LOGIN/SIGNUP *************************/
 
 
-
-
 /************************* CHECKOUT *************************/
 
 .grid {
@@ -824,7 +826,7 @@ section.footer .bottom-footer h3{
 
 .heading {
     padding-left: 3%;
-    font-size: 25px;
+    font-size: 20px;
     color: #0D4F8B;
 }
 
@@ -860,9 +862,6 @@ section.footer .bottom-footer h3{
 
 
 /************************* END OF ACCOUNT PAGE *************************/
-
-
-
 
 /************************* MODAL ACCOUNT FORMS FOR VIDEOS *************************/
 #unavailable-message h5 {

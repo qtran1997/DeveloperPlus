@@ -46,7 +46,7 @@ session_start();
         <section id="cover">
             <div class="cover-caption">
                 <div class="container">
-                    <h1 class="welcome-text">Welcome to CSS</h1>
+                    <h1 class="welcome-text">Explore the Endless Possibilities of CSS</h1>
                     <a href="#classes_offered" class="btn btn-outline-warning btn-sm" role="button" id="down_arrow">&darr;</a>
                 </div>
             </div>
@@ -59,7 +59,7 @@ session_start();
 
         <div class="coursemenu_filter">
 
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -93,115 +93,82 @@ session_start();
 
         <!-- COURSE SELECTIONS --> 
 
-        <div class="container text-center courses">
-            <div class="row">
-                <div class="col-4">
-                    <img src="Images/css_icon.png" class="img-fluid" alt="">
-                </div>
-                <div class="col-4">
-                    <img src="Images/html_icon.png" class="img-fluid" alt="">
-                </div>
-                <div class="col-4">
-                    <img src="Images/bootstrap.png" class="img-fluid" alt="">
-                </div>
-            </div>       
-        </div>
-
-        <div class="container text-center courses">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                <div class="row">
-                    <div class="course">
-                        <img src="Images/css_icon.png" alt="" class="img-fluid">
-                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+        <div class="container mt-1 text-center">
+            <div class="card-deck">
+                <div class="card card1">
+                    <div class="card-body">
+                        <img src="Images/css_icon.png" alt="" class="img-fluid course-img">
+                        <h4 class="card-title mt-2">
+                            <h6><img src="Images/lake.jpeg" alt="" class="sub-heading-img">
+                                +32,807 Students <i class="far fa-clock"> 1h 10m</i></h6>
+                        </h4>
+                        <h5 class="card-subtitle"><strong>Mastering CSS. <br> A Brief Introduction</strong></h5>
+                        <p class="card-text mt-3">Lorem ipsum dolor sit amet.</p>
                     </div>
-                    <div class="course">
-                        <img src="Images/css_icon.png" alt="" class="img-fluid">
-                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+                </div>
+                <div class="card card2">
+                    <div class="card-body">
+                        <img src="Images/html_icon.png" alt="" class="img-fluid course-img">
+                        <h4 class="card-title mt-2">
+                            <h6><img src="Images/shore.jpeg" alt="" class="sub-heading-img">
+                                +32,807 Students <i class="far fa-clock"> 1h 10m</i></h6>
+                        </h4>
+                        <h5 class="card-subtitle"><strong>Mastering HTML. <br> A Brief Introduction</strong></h5>
+                        <p class="card-text mt-3">Lorem ipsum dolor sit amet.</p>
                     </div>
-                    <div class="course">
-                        <img src="Images/css_icon.png" alt="" class="img-fluid">
-                        +32,807 Students <i class="far fa-clock"> 1h 10m</i>
+                </div>
+                <div class="card card3">
+                    <div class="card-body">
+                        <img src="Images/bootstrap.png" alt="" class="img-fluid course-img">
+                        <h4 class="card-title mt-2">
+                            <h6><img src="Images/website.jpeg" alt="" class="sub-heading-img">
+                                +32,807 Students <i class="far fa-clock"> 1h 10m</i></h6>
+                        </h4>
+                        <h5 class="card-subtitle"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></h5>
+                        <p class="card-text mt-3">Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!--
-<div class="container text-center description">
-<div class="row py-5">
-<div class="col-4">
-<div class="course-sub-heading">
-<img src="Images/lake.jpeg" alt="">
-+32,807 Students <i class="far fa-clock"> 1h 10m</i>
-</div>
-<p class="course-title"><strong>Mastering CSS. <br> A Brief Introduction</strong></p>
-<p>Lorem ipsum dolor sit amet.</p>
-</div>
-<div class="col-4">
-<div class="course-sub-heading">
-<img src="Images/lake.jpeg" alt="">
-+32,807 Students <i class="far fa-clock"> 1h 10m</i>
-</div>
-<p class="course-title"><strong>Mastering HTML. <br> A Brief Introduction</strong></p>
-<p>Lorem ipsum dolor sit amet.</p>
-</div>
-<div class="col-4">
-<div class="course-sub-heading">
-<img src="Images/lake.jpeg" alt="">
-+32,807 Students <i class="far fa-clock"> 1h 10m</i>
-</div>
-<p class="course-title"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></p>
-<p>Lorem ipsum dolor sit amet.</p>
-</div>
-</div>
-</div>
--->
 
-        <!--
-<div class="container text-center pt-2 courses">
-<div class="row">
-<div class="col-4">
-<img src="Images/css_icon.png" class="img-fluid" alt="">
-</div>
-<div class="col-4">
-<img src="Images/html_icon.png" class="img-fluid" alt="">
-</div>
-<div class="col-4">
-<img src="Images/bootstrap.png" class="img-fluid" alt="">
-</div>
-</div>       
-</div>
-
-<div class="container text-center description">
-<div class="row py-5">
-<div class="col-4">
-<div class="course-sub-heading">
-<img src="Images/lake.jpeg" alt="">
-+32,807 Students <i class="far fa-clock"> 1h 10m</i>
-</div>
-<p class="course-title"><strong>Mastering CSS. <br> A Brief Introduction</strong></p>
-<p>Lorem ipsum dolor sit amet.</p>
-</div>
-<div class="col-4">
-<div class="course-sub-heading">
-<img src="Images/shore.jpeg" alt="">
-+32,807 Students <i class="far fa-clock"> 1h 10m</i>
-</div>
-<p class="course-title"><strong>Mastering HTML. <br> A Brief Introduction</strong></p>
-<p>Lorem ipsum dolor sit amet.</p>
-</div>
-<div class="col-4">
-<div class="course-sub-heading">
-<img src="Images/lake.jpeg" alt="">
-+32,807 Students <i class="far fa-clock"> 1h 10m</i>
-</div>
-<p class="course-title"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></p>
-<p>Lorem ipsum dolor sit amet.</p>
-</div>
-</div>
-</div>
--->
-
+        <div class="container mt-1 text-center">
+            <div class="card-deck">
+                <div class="card card1">
+                    <div class="card-body">
+                        <img src="Images/css_icon.png" alt="" class="img-fluid course-img">
+                        <h4 class="card-title mt-2">
+                            <h6><img src="Images/lake.jpeg" alt="" class="sub-heading-img">
+                                +32,807 Students <i class="far fa-clock"> 1h 10m</i></h6>
+                        </h4>
+                        <h5 class="card-subtitle"><strong>Mastering CSS. <br> A Brief Introduction</strong></h5>
+                        <p class="card-text mt-3">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <div class="card-body">
+                        <img src="Images/html_icon.png" alt="" class="img-fluid course-img">
+                        <h4 class="card-title mt-2">
+                            <h6><img src="Images/shore.jpeg" alt="" class="sub-heading-img">
+                                +32,807 Students <i class="far fa-clock"> 1h 10m</i></h6>
+                        </h4>
+                        <h5 class="card-subtitle"><strong>Mastering HTML. <br> A Brief Introduction</strong></h5>
+                        <p class="card-text mt-3">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="card card3">
+                    <div class="card-body">
+                        <img src="Images/bootstrap.png" alt="" class="img-fluid course-img">
+                        <h4 class="card-title mt-2">
+                            <h6><img src="Images/website.jpeg" alt="" class="sub-heading-img">
+                                +32,807 Students <i class="far fa-clock"> 1h 10m</i></h6>
+                        </h4>
+                        <h5 class="card-subtitle"><strong>Mastering Bootstrap. <br> A Brief Introduction</strong></h5>
+                        <p class="card-text mt-3">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="middle">
             <div>
@@ -209,22 +176,13 @@ session_start();
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-5 col-md-12 col-sm-12">
                         <img src="Images/website.jpeg" alt="">
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12" id="css-description">
-                        <h2 class="text-center">LOREM</h2>
-                        <ul>
-                            <li>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
-                            </li>
-                            <li>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
-                            </li>
-                            <li>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
-                            </li>
-                        </ul>
+                    <div class=" offset-lg-1 col-lg-6 col-md-12 col-sm-12" id="css-description">
+                        <h2 class="text-center">Lebron James</h2> 
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</p>
                         <div id="wrapper">
                             <button type="button">LETS BEGIN</button>
                         </div>
@@ -259,6 +217,7 @@ session_start();
             </div>
         </div>
 
+        <!-- LEARN ON THE GO -->
         <div id="footer-cover">
             <div class="cover-caption">
                 <div class="container">
