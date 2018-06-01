@@ -42,12 +42,16 @@ session_start();
         <div class="video-container">
             <div class="video-header">
                 <span>
-                    <span class="previous" style="float:left">
+                    <span class="previous change-video" style="float:left">
                         <i class="fas fa-arrow-circle-left"></i>
                         Previous Lesson
                     </span>
 
-                    <span class="next" style="float:right">
+                    <span class="<?php 
+                                 if(isset($_SESSION['id'])) {
+                                     echo 'next';
+                                 }
+                                 ?> change-video" style="float:right">
                         Next Lesson
                         <i class="fas fa-arrow-circle-right"></i>
                     </span>

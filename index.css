@@ -220,7 +220,7 @@ body {
     #footer-cover {
         height: 65vh;
     }
-    
+
     #footer-cover p { 
         max-width: 55%;
     }
@@ -324,6 +324,7 @@ section.footer .bottom-footer h3{
     color: #000;
     font-size: 22px;
     grid-column: 1 / -1;
+    
 }
 
 .video-header i {
@@ -367,24 +368,9 @@ section.footer .bottom-footer h3{
     font-size: 16px;
 }
 
-.previous {
-    font-size: 18px;
+.change-video {
     margin: 6px;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.previous:hover{
-    cursor:pointer;
-}
-
-.next {
     font-size: 18px;
-    padding-right: .5%;
-    margin-top: 6px;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -392,8 +378,8 @@ section.footer .bottom-footer h3{
     user-select: none;
 }
 
-.next:hover{
-    cursor:pointer;
+.change-video:hover{
+     cursor: pointer;
 }
 
 .video-menu {
@@ -624,12 +610,12 @@ section.footer .bottom-footer h3{
     .contact-wrapper {
         margin: 25px auto 0;
     }
-    
+
     .top-form .inner-form {
         width: 100%;
         margin: 5px 0;
     }
-    
+
     .form-btn {
         width: 100%;
     }
