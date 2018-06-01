@@ -81,13 +81,13 @@ if(isset($_SESSION['id']))
                     }
                     ?>
                     <div class="row">
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                             <label for="email">Email Address</label>
                         </div>
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                             <input name="email" id ="emailchange" type="email" placeholder="<?php echo $_SESSION['email']; ?>" disabled>
                         </div>
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                             <button type="button" id="emailchangebutton">EDIT</button>
                         </div>
                     </div>
