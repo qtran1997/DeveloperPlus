@@ -320,7 +320,7 @@ session_start();
             </div>
             <hr class="w-100 clearfix">
             <h3>Add your own comment!</h3>
-            <form action="commentsystem/submitcomment.php" method="POST">
+            <form action="./commentsystem/submitcomment.php" method="POST">
                 <div id="add-vote" >
                     <input class="voting" id="upvote" name="upvote" readonly>
                     <input class="voting" id="downvote" name="downvote" readonly>
