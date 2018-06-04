@@ -34,67 +34,62 @@ session_start();
             ?>
         </div>
 
-        <div class="container-form" id="signup-form">
-            <div class="wrapper">
-                <div class="header">Signup for Exclusive Content</div>
-                <div class="contact">
-                    <form action="loginsystem/signupsubmit.php" method="POST">
-                        <?php
-                        $failureE = "";
-                        if(empty($_GET['failureE']))
-                        {
+        <div class="account-wrapper">
+            <div class="account-header">
+                <h1>Register</h1>
+                <hr id="account-bottom">
+                <p>Already have an account?<a href="login.php" class="link"> Login</a></p>
+            </div>
+            <div class="login">
+                <form action="loginsystem/signupsubmit.php" method="POST">
+                    <?php
+                    $failureE = "";
+                    if(empty($_GET['failureE']))
+                    {
 
-                        }
-                        else
-                        {
-                            $failureE = $_GET['failureE'];
-                        }
-                        if($failureE == 1)
-                        {
-                            echo "<p class='error'>Your email or login is already used!</p>";
-                        }
-                        $failureP = "";
-                        if(empty($_GET['failureP']))
-                        {
+                    }
+                    else
+                    {
+                        $failureE = $_GET['failureE'];
+                    }
+                    if($failureE == 1)
+                    {
+                        echo "<p class='error'>Your email or login is already used!</p>";
+                    }
+                    $failureP = "";
+                    if(empty($_GET['failureP']))
+                    {
 
-                        }
-                        else
-                        {
-                            $failureP = $_GET['failureP'];
-                        }
-                        if($failureP == 1 and $failureE != 1)
-                        {
-                            echo "<p class='error'>Your passwords do not match!</p>";
-                        }
-                        ?>
-                        <p> 
-                            <label for="full-name">First Name</label>
-                            <input type="text" name="fname" required>
-                        </p><p> 
-                        <label for="full-name">Last Name</label>
-                        <input type="text" name="lname" required>
-                        </p>
-                        <p> 
-                            <label for="email">Email</label>
-                            <input type="email" name="email" required>
-                        </p>
-                        <p>
-                            <label for="password">Password</label>
-                            <input type="password" name="pwd1" required>
-                        </p>
-                        <p>
-                            <label for="password">Re-Enter Password</label>
-                            <input type="password" name="pwd2" required>
-                        </p>
-                        <p class="full">
-                            <button>Sign Up</button>
-                        </p>
-                        <div class="privacy">
-                            By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+                    }
+                    else
+                    {
+                        $failureP = $_GET['failureP'];
+                    }
+                    if($failureP == 1 and $failureE != 1)
+                    {
+                        echo "<p class='error'>Your passwords do not match!</p>";
+                    }
+                    ?>
+                    <div class="login-form">
+                        <div class="login-input">
+                            <input type="text" name="fname" placeholder="First Name" required>
                         </div>
-                    </form>
-                </div>
-                <div class="footer" id="signin-footer">Already have an account?<a href="login.php" class="link"> Log in</a></div>
+                        <div class="login-input">
+                            <input type="text" name="lname" placeholder="Last Name" required>
+                        </div>
+                        <div class="login-input">
+                            <input type="email" name="email" placeholder="Email address" required>
+                        </div>
+                        <div class="login-input">
+                            <input type="password" name="pwd1" placeholder="Password" required>
+                        </div>
+                        <div class="login-input">
+                            <input type="password" name="pwd2" placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+                    <p class="text-center" id="register-footer"> By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                    <button class="btn form-btn">Register</button>
+                </form>
             </div>
         </div>
 

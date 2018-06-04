@@ -15,15 +15,21 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact Us</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="accountpage.php">Hello, <?php echo $_SESSION['fname'] ?></a>
-            </li>                  
-            <li class="nav-item">
-                <a class="nav-link" href="loginsystem/logoutsubmit.php">LOG OUT</a>
             </li>        
-        </ul>        
+        </ul>   
+        <ul class="navbar-nav ml-auto user-icon">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-center" href="accountpage.php">
+                        Hello, <?php echo $_SESSION['fname'] ?></a>
+                    <a class="dropdown-item" href="#"><?php echo $_SESSION['email'] ?> </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-center" href="loginsystem/logoutsubmit.php">Logout</a>
+                </div>
+            </li> 
+        </ul>     
     </div>
 </nav>
