@@ -138,7 +138,7 @@ if($success == 1) {
             <div class="floatright">
                 <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
 
-                <form class="form-inline">
+                <form>
                     <div class="form-group mb-2">
                         <label for="staticEmail2" class="sr-only">Full Name</label>
                         <input type="text" readonly class="form-control-plaintext" id="staticEmail2" placeholder="Full Name">
