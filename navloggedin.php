@@ -22,7 +22,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="far fa-user"></i>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item text-center" href="accountpage.php">
                         Hello, <?php echo $_SESSION['fname'] ?></a>
                     <a class="dropdown-item" href="#"><?php echo $_SESSION['email'] ?> </a>
