@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['cid'] = "bs001";
 ?>
 <html lang="en">
     <meta charset="UTF-8">
@@ -12,9 +13,9 @@ session_start();
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="../index.css">
 
-        <title>CSS Videos</title>
+        <title>Bootstrap Videos</title>
     </head>
 
     <body>
@@ -180,24 +181,24 @@ session_start();
                             <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>30. Guy Leonard (0:42)</li>
                         </ul>
 
-<!--
-                        <h3>Sorting Algorithms</h3>
-                        <ul class="nav nav-divider nav-stacked">
-                            <li><i class="fas fa-play-circle"></i>31. Bubble Sort (3:50)</li>
-                            <li data-toggle="modal" data-target="#myModal"><i class="fas fa-play-circle"></i>32. Merge Sort (2:43)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>33. Quick Sort (4:45)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>34. Heap Sort (4:32)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>35. The End (0:42)</li>
-                        </ul>
+                        <!--
+<h3>Sorting Algorithms</h3>
+<ul class="nav nav-divider nav-stacked">
+<li><i class="fas fa-play-circle"></i>31. Bubble Sort (3:50)</li>
+<li data-toggle="modal" data-target="#myModal"><i class="fas fa-play-circle"></i>32. Merge Sort (2:43)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>33. Quick Sort (4:45)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>34. Heap Sort (4:32)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>35. The End (0:42)</li>
+</ul>
 
-                        <h3>Data Structures</h3>
-                        <ul class="nav nav-divider nav-stacked">
-                            <li><i class="fas fa-play-circle"></i>36. Stacks/Queues (3:50)</li>
-                            <li data-toggle="modal" data-target="#myModal"><i class="fas fa-play-circle"></i>37. Hashtable (2:43)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>38. Binary Search Tree (4:45)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>39. Linked Lists (4:32)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>40. Final Project (0:42)</li>
-                        </ul>
+<h3>Data Structures</h3>
+<ul class="nav nav-divider nav-stacked">
+<li><i class="fas fa-play-circle"></i>36. Stacks/Queues (3:50)</li>
+<li data-toggle="modal" data-target="#myModal"><i class="fas fa-play-circle"></i>37. Hashtable (2:43)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>38. Binary Search Tree (4:45)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>39. Linked Lists (4:32)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>40. Final Project (0:42)</li>
+</ul>
 -->
                     </nav>
                 </div>
@@ -248,11 +249,11 @@ session_start();
                                <?php
                                if(!isset($_SESSION['id']))
                                {
-                                   echo 'href="login.php"';
+                                   echo 'href="../login.php"';
                                }
                                else
                                {
-                                   echo 'href="checkout.php"';
+                                   echo 'href="../checkout.php"';
                                }
                                ?>
                                ><button type="button" class="btn btn-primary">Purchase Now to Unlock</button></a>
@@ -276,57 +277,14 @@ session_start();
 </div>
 -->
 
-                <?php 
-                include "./loginsystem/dbh.php";
-                addcomments(); 
-
-                function addcomments() {
-                    include "./loginsystem/dbh.php";
-                    if(isset($_POST['amount'])) {
-                        $amount = $_POST['amount'];
-                    }
-                    else {
-                        $amount = 0;
-                    }
-                    for ($i = 1; $i <= $amount+5; $i++) {
-
-                        $sql = "SELECT * FROM commentsystem WHERE id='$i'";
-                        $result = mysqli_query($conn, $sql);
-                        $row = mysqli_fetch_assoc($result);
-                        $fname = $row['fname'];
-                        $comment = $row['comment'];
-                        $rating = "thumbUp.png";
-                        $date = substr($row['date'], 0, 10);
-                        $vote = "upvote";
-                        if($row['rating'] == 1) {
-                            $rating = "thumbUp.png";
-                            $vote = "upvote";
-                        }
-                        else {
-                            $rating = "thumbDown.png";
-                            $vote = "downvote";
-                        }
-
-                        echo '<div class="comment posted-comment">
-                    <p>
-                        <label for="comment-box" style="display:inline-block; width:100px;">' . $fname . '<br>' . $date .'</label>
-                        <img id="' . $vote . '" src="./Images/' . $rating . '">
-                        <textarea name="comment-box" class="comment-box" disabled>' . $comment . '</textarea>
-                    </p>    
-                </div>';
-                    }
-                }
-
-
+                <?php
+                include 'universalcomment.php';
                 ?>
-                <form action="videos.php?comments=5" method="post">
-                    <input name="amount" value="5" hidden>
-                    <button class="more-comments" type="submit">read more</button>
-                </form>
+                
             </div>
             <hr class="w-100 clearfix">
             <h3>Add your own comment!</h3>
-            <form action="./commentsystem/submitcomment.php" method="POST">
+            <form action="../commentsystem/submitcomment.php" method="POST">
                 <div id="add-vote" >
                     <input class="voting" id="upvote" name="upvote" readonly>
                     <input class="voting" id="downvote" name="downvote" readonly>
@@ -343,6 +301,6 @@ session_start();
             ?>
         </section>
 
-        <script type="application/javascript" src="javascript/videos.js"></script>
+        <script type="application/javascript" src="../javascript/videos.js"></script>
     </body>
 </html>

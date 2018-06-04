@@ -21,15 +21,27 @@ $(document).ready(function() {
     $('.next').on('click', function(){
         if(currentVideo != 5)
         {
-            currentVideo++; 
-            changeVideo = "video" + currentVideo.toString();
-            videos[changeVideo]();
+            var videoSelect = "#video" + (currentVideo+1).toString();
+            if($(videoSelect).length) {
+                currentVideo++; 
+                changeVideo = "video" + currentVideo.toString();
+                videos[changeVideo]();
+                console.log('wtf');
+            }
+            else {
+                if(currentVideo+1 == 2) {
+                    $('#myModal').modal('show'); 
+                }
+                else {
+                    $('#purchaseModal').modal('show');
+                }
+            }
+
         }
 
     });
     $('.previous').on('click', function(){
-        if(currentVideo != 1)
-        {
+        if(currentVideo != 1) {
             currentVideo--; 
             changeVideo = "video" + currentVideo.toString();
             videos[changeVideo]();

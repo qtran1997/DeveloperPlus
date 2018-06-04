@@ -19,6 +19,12 @@ body {
     text-decoration: none;
 }
 
+.coursemenu_filter .nav-link:focus {
+    color: #000 !important;
+    font-weight: bold !important;
+    text-decoration-line: underline !important;
+}
+
 .nav-item {
     height: 35px !important;
 }
@@ -70,7 +76,7 @@ body {
 .coursemenu_filter .navbar-nav li {
     list-style: none;
     display: inline-block;
-    padding-left: 20px;
+    padding: 0 10px;
 }
 
 .coursemenu_filter .navbar-nav li a{
@@ -83,6 +89,15 @@ body {
 /************************* COURSES *************************/
 .card {
     border: none;
+}
+
+.card-deck{
+    display: inline-block;
+}
+
+.card-body{
+    width:350px;
+    height:300px;
 }
 
 .course-img {
@@ -312,8 +327,8 @@ section.footer .bottom-footer h3{
 
 .video-container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 200px 500px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 50px 500px 40px;
     color: white;
     text-align: center;
     padding: 1em;
@@ -324,7 +339,6 @@ section.footer .bottom-footer h3{
     color: #000;
     font-size: 22px;
     grid-column: 1 / -1;
-    
 }
 
 .video-header i {
@@ -368,9 +382,10 @@ section.footer .bottom-footer h3{
     font-size: 16px;
 }
 
-.change-video {
-    margin: 6px;
+.previous {
     font-size: 18px;
+    padding-left: 5%;
+    margin: 6px;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -378,8 +393,23 @@ section.footer .bottom-footer h3{
     user-select: none;
 }
 
-.change-video:hover{
-     cursor: pointer;
+.previous:hover{
+    cursor:pointer;
+}
+
+.next {
+    font-size: 18px;
+    padding-right: .5%;
+    margin-top: 6px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.next:hover{
+    cursor:pointer;
 }
 
 .video-menu {
