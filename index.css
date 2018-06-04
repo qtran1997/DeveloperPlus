@@ -19,6 +19,11 @@ body {
     text-decoration: none;
 }
 
+.coursemenu_filter .nav-link {
+    background:none;
+    border:none;
+}
+
 .coursemenu_filter .nav-link:focus {
     color: #000 !important;
     font-weight: bold !important;
@@ -101,7 +106,7 @@ body {
     border: none;
 }
 
-.card-deck{
+.video-lesson .card-deck{
     display: inline-block;
 }
 

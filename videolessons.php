@@ -76,7 +76,7 @@ session_start();
         <!-- COURSE SELECTIONS --> 
         <div>
 
-            <div class="container mt-1 text-center">
+            <div class="container video-lesson mt-1 text-center">
                 <div class="card-deck">
                     <div class="card tut-css">
                         <div class="card-body">
