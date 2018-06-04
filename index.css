@@ -19,6 +19,12 @@ body {
     text-decoration: none;
 }
 
+.coursemenu_filter .nav-link:focus {
+    color: #000 !important;
+    font-weight: bold !important;
+    text-decoration-line: underline !important;
+}
+
 .nav-item {
     height: 35px !important;
 }
@@ -80,7 +86,7 @@ body {
 .coursemenu_filter .navbar-nav li {
     list-style: none;
     display: inline-block;
-    padding-left: 20px;
+    padding: 0 10px;
 }
 
 .coursemenu_filter .navbar-nav li a{
@@ -93,6 +99,15 @@ body {
 /************************* COURSES *************************/
 .card {
     border: none;
+}
+
+.card-deck{
+    display: inline-block;
+}
+
+.card-body{
+    width:350px;
+    height:300px;
 }
 
 .course-img {

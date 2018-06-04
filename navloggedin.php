@@ -10,7 +10,7 @@
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="videos.php">Video Lessons</a>
+                <a class="nav-link" href="videolessons.php">Video Lessons</a>
             </li>
 
             <li class="nav-item">

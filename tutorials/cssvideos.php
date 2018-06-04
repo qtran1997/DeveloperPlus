@@ -1,20 +1,21 @@
 <?php
 session_start();
+$_SESSION['cid'] = "css001";
 ?>
 <html lang="en">
     <meta charset="UTF-8">
     <head>
         <meta charset="UTF-8" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">    
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="../index.css">
 
-        <title>HTML Videos</title>
+        <title>Bootstrap Videos</title>
     </head>
 
     <body>
@@ -30,15 +31,24 @@ session_start();
         </div>
 
         <!-- Video Column Container-->
-
+        <?php
+        $failure = "";
+        if(!empty($_GET['failure'])) {
+            $failure = $_GET['failure'];
+        }
+        if($failure == 1) {
+            echo "<p class='error' style='text-align:center'>You have already commented!</p>";
+        }
+        ?>
         <div class="video-container">
             <div class="video-header">
                 <span>
-                    <span class="previous" style="float:left";>
+                    <span class="previous change-video" style="float:left">
                         <i class="fas fa-arrow-circle-left"></i>
                         Previous Lesson
                     </span>
-                    <span class="next" style="float:right";>
+
+                    <span class="next change-video" style="float:right">
                         Next Lesson
                         <i class="fas fa-arrow-circle-right"></i>
                     </span>
@@ -49,9 +59,9 @@ session_start();
             <div class="video-menu">
                 <div id="sidebar">
                     <nav>
-                        <h3>HTML Videos</h3>
+                        <h3>CSS Videos</h3>
                         <ul class="nav nav-divider nav-stacked">
-                            <li id="video1" ><i class="fas fa-play-circle"></i>1. Introduction (3:50)</li>
+                            <li id="video1" ><i class="fas fa-play-circle"></i>1. Background Color (3:50)</li>
                             <li 
                                 <?php
                                 if(!isset($_SESSION['id']))
@@ -63,7 +73,7 @@ session_start();
                                     echo 'id="video2"';
                                 }
                                 ?>
-                                ><i class="fas fa-play-circle"></i>2. Clicker Setup (2:43)</li>
+                                ><i class="fas fa-play-circle"></i>2. Font Color (2:43)</li>
                             <li 
                                 <?php
                                 if(!isset($_SESSION['id']))
@@ -82,7 +92,7 @@ session_start();
                                     }
                                 }
                                 ?>
-                                ><i class="fas fa-play-circle"></i>3. Using the Clicker (4:45)</li>
+                                ><i class="fas fa-play-circle"></i>3. Font Size and Font Styles (4:45)</li>
                             <li 
                                 <?php
                                 if(!isset($_SESSION['id']))
@@ -101,7 +111,7 @@ session_start();
                                     }
                                 }
                                 ?>
-                                ><i class="fas fa-play-circle"></i>4. Using the Clicker II (4:32)</li>
+                                ><i class="fas fa-play-circle"></i>4. Borders (4:32)</li>
                             <li 
                                 <?php
                                 if(!isset($_SESSION['id']))
@@ -167,23 +177,25 @@ session_start();
                             <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>30. Guy Leonard (0:42)</li>
                         </ul>
 
-                        <h3>Sorting Algorithms</h3>
-                        <ul class="nav nav-divider nav-stacked">
-                            <li><i class="fas fa-play-circle"></i>31. Bubble Sort (3:50)</li>
-                            <li data-toggle="modal" data-target="#myModal"><i class="fas fa-play-circle"></i>32. Merge Sort (2:43)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>33. Quick Sort (4:45)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>34. Heap Sort (4:32)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>35. The End (0:42)</li>
-                        </ul>
+                        <!--
+<h3>Sorting Algorithms</h3>
+<ul class="nav nav-divider nav-stacked">
+<li><i class="fas fa-play-circle"></i>31. Bubble Sort (3:50)</li>
+<li data-toggle="modal" data-target="#myModal"><i class="fas fa-play-circle"></i>32. Merge Sort (2:43)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>33. Quick Sort (4:45)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>34. Heap Sort (4:32)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>35. The End (0:42)</li>
+</ul>
 
-                        <h3>Data Structures</h3>
-                        <ul class="nav nav-divider nav-stacked">
-                            <li><i class="fas fa-play-circle"></i>36. Stacks/Queues (3:50)</li>
-                            <li data-toggle="modal" data-target="#myModal"><i class="fas fa-play-circle"></i>37. Hashtable (2:43)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>38. Binary Search Tree (4:45)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>39. Linked Lists (4:32)</li>
-                            <li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>40. Final Project (0:42)</li>
-                        </ul>
+<h3>Data Structures</h3>
+<ul class="nav nav-divider nav-stacked">
+<li><i class="fas fa-play-circle"></i>36. Stacks/Queues (3:50)</li>
+<li data-toggle="modal" data-target="#myModal"><i class="fas fa-play-circle"></i>37. Hashtable (2:43)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>38. Binary Search Tree (4:45)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>39. Linked Lists (4:32)</li>
+<li data-toggle="modal" data-target="#purchaseModal"><i class="fas fa-play-circle"></i>40. Final Project (0:42)</li>
+</ul>
+-->
                     </nav>
                 </div>
             </div>
@@ -233,11 +245,11 @@ session_start();
                                <?php
                                if(!isset($_SESSION['id']))
                                {
-                                   echo 'href="login.php"';
+                                   echo 'href="../login.php"';
                                }
                                else
                                {
-                                   echo 'href="checkout.php"';
+                                   echo 'href="../checkout.php"';
                                }
                                ?>
                                ><button type="button" class="btn btn-primary">Purchase Now to Unlock</button></a>
@@ -248,12 +260,44 @@ session_start();
             </div>
         </div>
 
+        <div class="comment-container">
+            <div id="posted-comments">
+                <h5>10 out of 10 people recommend this tutorial</h5>
+                <!--
+<div class="comment">
+<p>
+<label for="comment-box">Name Here</label>
+<img id="upvote" src="Images/thumbUp.png">
+<textarea name="comment-box" class="comment-box" disabled>bruh this shit poo poo who made this website??</textarea>
+</p>    
+</div>
+-->
+
+                <?php
+                include 'universalcomment.php';
+                ?>
+                
+                
+            </div>
+            <hr class="w-100 clearfix">
+            <h3>Add your own comment!</h3>
+            <form action="../commentsystem/submitcomment.php" method="POST">
+                <div id="add-vote" >
+                    <input class="voting" id="upvote" name="upvote" readonly>
+                    <input class="voting" id="downvote" name="downvote" readonly>
+                    <textarea name="comment" class="comment-box" required></textarea>
+                    <br>
+                    <button id="submit-comment" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
         <section class="footer">
             <?php  
             include 'footer.php';
             ?>
         </section>
 
-        <script type="application/javascript" src="javascript/videos.js"></script>
+        <script type="application/javascript" src="../javascript/videos.js"></script>
     </body>
 </html>
