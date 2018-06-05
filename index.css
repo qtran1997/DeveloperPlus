@@ -959,7 +959,7 @@ section.footer .bottom-footer h3{
 .floatright {
     float:left;
     width: 100%;
-    height: 600px;
+/*    height: 600px;*/
     padding: 2em;
     margin: 0 auto;
 }
@@ -1018,9 +1018,9 @@ section.footer .bottom-footer h3{
 }
 
 #save-edits {
-    width: 100% !important;
+    width: 50% !important;
     height: 50px;
-    margin-top: 5px;
+    margin:5px auto;
     background: #C95D63;
     color: #fff;
 }
