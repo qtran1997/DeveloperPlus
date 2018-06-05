@@ -43,14 +43,114 @@ session_start();
 
 
 
+        <div class="cart-wrapper">
+            <div class="shopleft">
+                <h3 id="shop-list-header">Your Selections <span class="price-tab"> Price</span></h3>
+                <hr>
+
+                <div class="list-container">
+                    <ul class="courses-added">
+                        <li>
+                            <div class="course-wrapper">
+                                <div class="left-img">
+                                    <img src="Images/bootstrap.png" alt="">
+                                    <p class="course-title">An Introduction to Bootstrap 4 <span class="remove-tab">remove</span><span class="cost-tab">$19.99</span></p>
+                                    <hr>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="course-wrapper">
+                                <div class="left-img">
+                                    <img src="Images/html_icon.png" alt="">
+                                    <p class="course-title">An Introduction to Bootstrap 4 <span class="remove-tab">remove</span><span class="cost-tab">$19.99</span></p>
+                                    <hr>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="course-wrapper">
+                                <div class="left-img">
+                                    <img src="Images/css_icon.png" alt="">
+                                    <p class="course-title">An Introduction to Bootstrap 4 <span class="remove-tab">remove</span><span class="cost-tab">$19.99</span></p>
+                                    <hr>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="course-wrapper">
+                                <div class="left-img">
+                                    <img src="Images/bootstrap.png" alt="">
+                                    <p class="course-title">An Introduction to Bootstrap 4 <span class="remove-tab">remove</span><span class="cost-tab">$19.99</span></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shopright">
+                <div class="checkoutbox">
+                    <div class="checkout-header">
+                        <h3 class="text-center">Summary</h3>
+                        <hr>
+                    </div>
+                    <div class="checkout-body">
+                        <h5>Total: <span class="checkout-tab">$79.96</span></h5>
+                        <hr>
+                        <div class="checkout-submit">
+                            <div style="text-align:center;">
+                                <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Checkout Now</button>
+                            </div>
+                            <p class="text-center"><strong>or</strong></p>
+                            <div style="text-align:center;">
+                                <img src="Images/stripelogo.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
 
 
-
-
-
-
-
+        <!-- STRIPE PAYMENT-->
+        <form style="display:inline-block; margin-right:12%" action="stripesystem/stripe.php" method="POST">
+            <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_Zpooc1w4cUlZMOMsrHrs85V9"
+                    data-amount="500"
+                    data-name="SheekMedia.com/DeveloperPlus"
+                    data-description="Video Courses"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto"
+                    data-zip-code="true"
+                    data-email="<?php echo $_SESSION['email'] ?>">
+            </script>
+        </form>
+        
+        
+        <!-- CREDIT CARD MODAL -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!--
@@ -130,7 +230,7 @@ session_start();
 
 <section class="footer">
 <?php  
-include 'footer.php';
+    include 'footer.php';
 ?>
 </section>
 -->

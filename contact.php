@@ -62,7 +62,9 @@ session_start();
                         <textarea placeholder="Your Message" required></textarea>
                     </div>
                 </div>
-                <div class="btn form-btn">Send</div>
+                <div style="text-align:center;">
+                    <div class="btn form-btn">Send</div>
+                </div>
             </div>
         </div>
 

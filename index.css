@@ -34,6 +34,12 @@ body {
     height: 35px !important;
 }
 
+.navbar-toggler-icon {
+    background: red;
+    color: #fff;
+    z-index: 999;
+}
+
 /************************* LOADING-TOP *************************/
 
 #cover {
@@ -256,6 +262,15 @@ body {
     }
 }
 
+@media screen and (min-width: 768px) {
+    #footer-cover p { 
+        max-width: 45%;
+    }
+
+    #footer-cover h1 {
+        font-size: 55px;
+    }
+}
 /************************* SUBSCRIBE FORM *************************/
 #subscribe-form {
     margin-top: 10%;
@@ -383,7 +398,7 @@ section.footer .bottom-footer h3{
     padding: 4px;
 }
 
-/* Select children in range of 2 - 6 inclusive */
+/* Select children in range of 1 - 6 inclusive */
 #sidebar ul li:nth-child(n+1):nth-child(-n+6):hover {
     background: rgba(230,230,230,.3);
 }
@@ -594,7 +609,7 @@ section.footer .bottom-footer h3{
 .form input[type="text"],
 .form input[type="email"],
 .form textarea {
-    padding: 15px 4px;
+    padding: 15px 7px;
     border-color: black;
     width: 100%;
     transition: all 0.2s ease;
@@ -634,19 +649,19 @@ section.footer .bottom-footer h3{
 ::-webkit-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
-    padding-left: 7px;
+    padding-left: 3px;
 }
 
 ::-moz-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
-    padding-left: 7px;
+    padding-left: 3px;
 }
 
 ::-ms-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
-    padding-left: 7px;
+    padding-left: 3px;
 }
 
 
@@ -712,6 +727,7 @@ section.footer .bottom-footer h3{
     margin: 10px 0;
     overflow: hidden;
     font-size: 16px;
+    padding-left: 7px;
 }
 
 .login input:focus {
@@ -767,25 +783,104 @@ section.footer .bottom-footer h3{
 
 /************************* CHECKOUT *************************/
 
+.cart-wrapper {
+    width: 100%;
+    margin-top: 10px;
+}
+.shopright {
+    float:left;
+    width: 35%;
+    height: 400px;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.shopleft {
+    float: left;
+    width: 65%;
+    height: 600px;
+    padding: 2em;
+}
 
 
+.price-tab {
+    display: inline-block;
+    margin-left: 550px;
+}
 
+.checkout-tab {
+    display: inline-block;
+    margin-left: 230px;
+}
 
+.shopleft hr {
+    width: 100%;
+    border: 1px solid black;    
+    opacity: 0.3;
+}
 
+#shop-list-header {
+    font-size: 20px;
+    opacity: 0.7;
+}
 
+.course-wrapper {
+    width: 100%;
+}
 
+.left-img {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
 
+.left-img > * {
+    display: inline-block;
+}
 
+.left-img img {
+    height: 120px; 
+    width: 120px;
+}
 
+.remove-tab {
+    display: inline-block;
+    margin-left: 110px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
 
+.cost-tab {
+    display: inline-block;
+    margin-left: 150px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
 
+.courses-added li {
+    list-style: none;
+}
 
+.checkout-body {
+    padding-top: 4px;
+}
 
+.checkout-body h5 {
+    padding-top: 20px;
+}
 
+.checkout-body button {
+    background: #C95D63;
+    color: #fff;
+    padding: 5px;
+    width: 50%;
+}
 
-
-
-
+.checkout-submit img {
+    height: 100px;
+    width: 200px;
+}
 
 
 
@@ -845,27 +940,6 @@ section.footer .bottom-footer h3{
     padding-left: 0% !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /************************* END OF CHECKOUT *************************/
 
 
@@ -882,16 +956,20 @@ section.footer .bottom-footer h3{
     width: 100%;
 }
 
-.floatleft, .floatright {
+.floatright {
     float:left;
     width: 100%;
     height: 600px;
     padding: 2em;
+    margin: 0 auto;
 }
 
 .floatleft {
+    float: left;
+    width: 100%;
     height: 150px !important;
-    background: #C95D63;
+    padding: 2em;
+    background: #505763;
 }
 
 .floatleft a{
@@ -906,8 +984,13 @@ section.footer .bottom-footer h3{
     padding: 1em;
 }
 
-.change-fields label {
-    margin: 10px;
+.change-fields .row label {
+    font-weight: bold;
+    margin-bottom: -6px;
+}
+
+.change-fields .row {
+    margin-bottom: 20px;
 }
 
 .floatright {
@@ -923,6 +1006,7 @@ section.footer .bottom-footer h3{
     width: 100%;
     min-height: 40px;
     margin-top: 5px;
+    padding-left: 7px;
 }
 
 .floatright .row button {
@@ -942,27 +1026,23 @@ section.footer .bottom-footer h3{
 }
 
 @media screen and (min-width: 768px) {
-    
-    .floatleft {
-        border-right: 2px solid black;
-        width: 20%;
-        height: 100% !important;
-        background: green;
-    }
 
     .floatright {
-        width: 80%;
+        width: 100%;
+    }
+
+    .change-fields .row label {
+        margin-top: 7px;
     }
 
     .floatright .row button {
-        background: blue;
-        margin: 0;
+        margin-top: 5px;
         color: #fff;
+        width: 40%;
     }
-    
+
     #save-edits {
-        width: 30% !important;
-        background: green;
+        width: 25% !important;
         color: #fff;
     }
 }

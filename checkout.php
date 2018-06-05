@@ -85,31 +85,31 @@ session_start();
 
 
 
-        <!--
 
-<h4>Billing:</h4>
-<form style="display:inline-block; margin-right:12%" action="stripesystem/stripe.php" method="POST">
-<script
-src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-data-key="pk_test_Zpooc1w4cUlZMOMsrHrs85V9"
-data-amount="50"
-data-name="AmazonClicker.com"
-data-description="Amazon Clicker Charge"
-data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-data-locale="auto"
-data-zip-code="true"
-data-email="<?php echo $_SESSION['email'] ?>">
-</script>
-</form>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<h5>Pay with Paypal!</h5>
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="G8K5YCE684SRW">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
 
--->
+        <h4>Billing:</h4>
+        <form style="display:inline-block; margin-right:12%" action="stripesystem/stripe.php" method="POST">
+            <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_Zpooc1w4cUlZMOMsrHrs85V9"
+                    data-amount="50"
+                    data-name="SheekMedia.com/DeveloperPlus"
+                    data-description="Video Courses"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto"
+                    data-zip-code="true"
+                    data-email="<?php echo $_SESSION['email'] ?>">
+            </script>
+        </form>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <h5>Pay with Paypal!</h5>
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="G8K5YCE684SRW">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+
 
 
 
