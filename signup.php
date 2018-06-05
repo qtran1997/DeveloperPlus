@@ -88,7 +88,9 @@ session_start();
                         </div>
                     </div>
                     <p class="text-center" id="register-footer"> By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
-                    <button class="btn form-btn">Register</button>
+                    <div style="text-align:center;">
+                        <button class="btn form-btn">Register</button>
+                    </div>
                 </form>
             </div>
         </div>

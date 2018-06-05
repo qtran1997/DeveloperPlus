@@ -53,7 +53,7 @@ if(isset($_SESSION['id']))
             <div class="wrap">
                 <div class="floatleft">
                     <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
-                    <a href="#"><i class="fas fa-shopping-cart"></i> Shop</a>
+                    <a href="shoppingcart.php"><i class="fas fa-shopping-cart"></i> Shop</a>
                 </div>
                 <div class="floatright">
                     <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
@@ -79,13 +79,13 @@ if(isset($_SESSION['id']))
 
                             <div class="change-fields">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                         <label for="name">Full Name</label>
                                     </div>
                                     <div class="col-lg-4 col-md-4">
                                         <input name="name" id="namechange" type="text" placeholder="<?php echo $_SESSION['fname'] . " " . $_SESSION['lname']; ?>" disabled>
                                     </div>
-                                    <div class="col-lg-4 col-md-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
                                         <button type="button" id="namechangebutton">EDIT</button>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@ if(isset($_SESSION['id']))
                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                         <button type="button" id="emailchangebutton">EDIT</button>
                                     </div>
-                                </div>
+                                </div>    
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4">
                                         <label for="password">New Password</label>
@@ -113,7 +113,7 @@ if(isset($_SESSION['id']))
                                         <label for="password">Confirm Password</label>
                                     </div>
                                     <div class="col-lg-4 col-md-4">
-                                        <input name="pwd2" class="passwordchange" type="password" placeholder="********" disabled>
+                                        <input name="pwd2" class="passwordchange" type="password" disabled>
                                     </div>
                                     <div class="col-lg-4 col-md-4">
                                         <button type="button" id="passwordchangebutton">EDIT</button>
@@ -124,10 +124,9 @@ if(isset($_SESSION['id']))
                         </form>
                     </div>
                 </div>
-
-
             </div>
         </div>
+
 
 
 
@@ -146,6 +145,7 @@ include 'footer.php';
 
 </section>
 -->
+
 
 
         <script type="application/javascript" src="javascript/accountpage.js"></script>

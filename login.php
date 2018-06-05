@@ -55,7 +55,9 @@ session_start();
                         </div>
                     </div>
                     <p class="text-center" id="forgot-password"><a href="changepwd.php">Forgot Password?</a></p>
-                    <button class="btn form-btn" id="login-btn">Login</button>
+                    <div style="text-align:center;">
+                        <button class="btn form-btn" id="login-btn">Login</button>
+                    </div>
                 </form>
             </div>
         </div>

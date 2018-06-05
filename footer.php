@@ -4,10 +4,10 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
             <h1>Home</h1>
             <a href="contact.php"><p>Contact Us</p></a>
-            <a href="#"><p>Terms of Use</p></a>
+            <a href="videolessons.php"><p>Video Lessons</p></a>
             <a href="#"><p>Privacy Policy</p></a>
             <hr class="w-100 clearfix d-md-none hidden-sm hidden-md hidden-lg">
-        </div>
+        </div> 
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
             <h1>My Account</h1>
