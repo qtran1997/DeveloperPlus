@@ -34,8 +34,8 @@
     }
 
     if(!$row = mysqli_fetch_assoc($result)) {
-        $sql = "INSERT INTO aclickerlogin (fname, lname, email, pwd, pb) 
-        VALUES ('$fname','$lname','$email', '$pwd', '0')";
+        $sql = "INSERT INTO aclickerlogin (fname, lname, email, pwd) 
+        VALUES ('$fname','$lname','$email', '$pwd')";
         $result = mysqli_query($conn, $sql);
         
         $_SESSION['id'] = $row['id'];

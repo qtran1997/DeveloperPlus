@@ -43,24 +43,3 @@ function addcomments() {
 
 
 ?>
-<form action="<?php echo $_SERVER['REQUEST_URI']; ?>?comments=1" method="POST">
-    <input name="amount" value="
-                                <?php
-                                $table = $_SESSION['cid'];
-                                include "../commentsystem/cdbh.php";
-                                $sql = "SELECT id from $table ORDER BY id DESC LIMIT 1";
-                                $result = mysqli_query($conn, $sql);
-                                $row = mysqli_fetch_assoc($result);
-                                echo $row['id'];
-                                ?>
-                                " hidden>
-    <button class="more-comments" type="submit" <?php $comments = "";
-            if(!empty($_GET['comments'])) {
-                $comments = $_GET['comments'];
-            }
-            if($comments == 1) {
-                echo "hidden";
-            }
-            ?>
-            >See All Comments</button>
-</form>

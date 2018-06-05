@@ -57,25 +57,25 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">All Courses <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="videolessons.php">All Courses <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CSS3</a>
+                            <a class="nav-link" href="videolessons.php">CSS3</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">HTML5</a>
+                            <a class="nav-link" href="videolessons.php">HTML5</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bootstrap4</a>
+                            <a class="nav-link" href="videolessons.php">Bootstrap4</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Technology</a>
+                            <a class="nav-link" href="videolessons.php">Technology</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Design</a>
+                            <a class="nav-link" href="videolessons.php">Design</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Business</a>
+                            <a class="nav-link" href="videolessons.php">Business</a>
                         </li>
                     </ul>
                 </div>
@@ -159,6 +159,7 @@ session_start();
                     </div>
                 </div>
             </div>
+            <a id="see-more" href="videolessons.php" type="button">See More Courses</a>
         </div>
 
         <div class="middle">

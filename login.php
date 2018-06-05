@@ -29,8 +29,6 @@ session_start();
 
             ?>
         </div>
-
-
         <div class="account-wrapper">
             <div class="account-header">
                 <h1>Login</h1>
