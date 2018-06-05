@@ -34,126 +34,106 @@ if(isset($_SESSION['id']))
         </div>
 
 
-        <!--
-<div class="account-profile">
-<div class="heading">
-<?php
-$purchased = "";
-if(!empty($_GET['purchased'])) {
-    $purchased = $_GET['purchased'];
-}
-if($purchased == 1) {
-    echo "<p class='success'>Thank you so much for purchasing our product!!</p>";
-}
-?>
-<i class="fas fa-shopping-cart"></i>
-<?php
-if($_SESSION['pb'] == 1) {
-    echo '<p class="success" style="display:inline-block">Purchased Premium Bundle!</p>';
-}
-else {
-    echo '<a href="checkout.php">Purchase Premium Bundle</a>';
-}
-?>
 
-</div>
+        <div class="account-profile">
+            <div class="heading">
+                <?php
+                $purchased = "";
+                if(!empty($_GET['purchased'])) {
+                    $purchased = $_GET['purchased'];
+                }
+                if($purchased == 1) {
+                    echo "<p class='success'>Thank you so much for purchasing our product!!</p>";
+                }
+                ?>
 
-<div class="heading">
-<i class="fas fa-user"></i> Edit Profile
-</div>
-<div class="change-info">
-<form action="loginsystem/changeinfosubmit.php" method="POST">
-<?php 
-$failure = "";
-if(!empty($_GET['failure'])) {
-    $failure = $_GET['failure'];
-}
-if($failure == 1){
-    echo "<p class='error'>Your new passwords do not match!</p>";
-}
-$success = "";
-if(!empty($_GET['success'])) {
-    $success = $_GET['success'];
-}
-if($success == 1) {
-    echo "<p class='success'>Success!</p>";
-}
-?>
-<div class="row">
-<div class="col-lg-4 col-md-4 col-sm-12">
-<label for="email">Email Address</label>
-</div>
-<div class="col-lg-4 col-md-4 col-sm-12">
-<input name="email" id ="emailchange" type="email" placeholder="<?php echo $_SESSION['email']; ?>" disabled>
-</div>
-<div class="col-lg-4 col-md-4 col-sm-12">
-<button type="button" id="emailchangebutton">EDIT</button>
-</div>
-</div>
-
-<br>
-<div class="row">
-<div class="col-lg-4 col-md-4">
-<label for="password">Old Password</label>
-</div>
-<div class="col-lg-4 col-md-4">
-<input name="pwd1" class="passwordchange" type="password" placeholder="********" disabled>
-</div>
-<div class="col-lg-4 col-md-4">
-<button type="button" id="passwordchangebutton">EDIT</button>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-4 col-md-4">
-<label for="password">Password</label>
-</div>
-<div class="col-lg-4 col-md-4">
-<input name="pwd1" class="passwordchange" type="password" placeholder="********" disabled>
-</div>
-<div class="col-lg-4 col-md-4">
-<button type="button" id="passwordchangebutton">EDIT</button>
-</div>
-</div>
-<br>
-<div class="row edit-field">
-<div class="col-lg-4 col-md-4">
-<label for="password">Confirm Password</label>
-</div>
-<div class="col-lg-4 col-md-4">
-<input name="pwd2" class="passwordchange" type="password" placeholder="********" disabled>
-</div>
-
-</div>
-<button type="submit" id="save-edits">SAVE CHANGES</button>
-</form>
-</div>
-</div>
--->
-
-        <div class="wrap">
-            <div class="floatleft">
-                <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> Shop</a>
             </div>
-            <div class="floatright">
-                <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
 
-                <form>
-                    <div class="form-group mb-2">
-                        <label for="staticEmail2" class="sr-only">Full Name</label>
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" placeholder="Full Name">
+
+            <div class="wrap">
+                <div class="floatleft">
+                    <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i> Shop</a>
+                </div>
+                <div class="floatright">
+                    <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
+
+                    <div class="change-info">
+                        <form action="loginsystem/changeinfosubmit.php" method="POST">
+                            <?php 
+                            $failure = "";
+                            if(!empty($_GET['failure'])) {
+                                $failure = $_GET['failure'];
+                            }
+                            if($failure == 1){
+                                echo "<p class='error'>Your new passwords do not match!</p>";
+                            }
+                            $success = "";
+                            if(!empty($_GET['success'])) {
+                                $success = $_GET['success'];
+                            }
+                            if($success == 1) {
+                                echo "<p class='success'>Success!</p>";
+                            }
+                            ?>
+
+                            <div class="change-fields">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label for="name">Full Name</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input name="name" class="passwordchange" type="text" placeholder="<?php echo $_SESSION['fname']; ?>" disabled>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <button type="button" id="namechangebutton">EDIT</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <label for="email">Email Address</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <input name="email" id ="emailchange" type="email" placeholder="<?php echo $_SESSION['email']; ?>" disabled>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <button type="button" id="emailchangebutton">EDIT</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label for="password">Old Password</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input name="pwd1" class="passwordchange" type="password" placeholder="********" disabled>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <button type="button" id="passwordchangebutton">EDIT</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label for="password">New Password</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input name="pwd1" class="passwordchange" type="password" placeholder="********" disabled>
+                                    </div>
+
+                                </div>
+                                <div class="row edit-field">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label for="password">Confirm Password</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input name="pwd2" class="passwordchange" type="password" placeholder="********" disabled>
+                                    </div>
+
+                                </div>
+                                <button type="submit" id="save-edits">SAVE CHANGES</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-
-               
-
-
-                </form>
-
+                </div>
 
 
             </div>
@@ -166,8 +146,9 @@ if($success == 1) {
 
 
 
-        <!--
 
+
+        <!--
 <section class="footer">
 <?php  
 include 'footer.php';
@@ -175,6 +156,7 @@ include 'footer.php';
 
 </section>
 -->
+
 
         <script type="application/javascript" src="javascript/accountpage.js"></script>
 
