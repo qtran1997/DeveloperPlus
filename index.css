@@ -584,7 +584,7 @@ section.footer .bottom-footer h3{
 .form input[type="text"],
 .form input[type="email"],
 .form textarea {
-    padding: 15px 3px;
+    padding: 15px 4px;
     border-color: black;
     width: 100%;
     transition: all 0.2s ease;
@@ -875,13 +875,13 @@ section.footer .bottom-footer h3{
 .floatleft, .floatright {
     float:left;
     width: 100%;
-    height: 400px;
+    height: 600px;
     padding: 2em;
 }
 
 .floatleft {
-    background: #ff0000;
-    border-right: 3px solid black;
+    height: 150px !important;
+    background: #C95D63;
 }
 
 .floatleft a{
@@ -889,10 +889,18 @@ section.footer .bottom-footer h3{
     font-size: 20px;
     text-align: center;
     margin: 10px;
+    color: #fff;
+}
+
+.change-fields {
+    padding: 1em;
+}
+
+.change-fields label {
+    margin: 10px;
 }
 
 .floatright {
-    background-color: #00ff00;
     width: 100%;
 }
 
@@ -900,10 +908,53 @@ section.footer .bottom-footer h3{
     font-size: 30px;
 }
 
+.floatright .row input {
+    border: 1px solid #000;
+    width: 100%;
+    min-height: 40px;
+    margin-top: 5px;
+}
+
+.floatright .row button {
+    width: 100%;
+    margin-top: 5px;
+    color: #fff;
+    background: #C95D63;
+    min-height: 40px;
+}
 
 #save-edits {
-    width: 150px !important;
+    width: 100% !important;
     height: 50px;
+    margin-top: 5px;
+    background: #C95D63;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .floatleft {
+        border-right: 2px solid black;
+        width: 20%;
+        height: 100% !important;
+        background: green;
+    }
+
+    .floatright {
+        width: 80%;
+    }
+
+    .floatright .row button {
+        background: blue;
+        margin: 0;
+        color: #fff;
+    }
+    
+    #save-edits {
+        width: 30% !important;
+        background: green;
+        color: #fff;
+    }
 }
 
 
