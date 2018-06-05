@@ -1,6 +1,21 @@
 $(document).ready(function () {
     var ectoggle = 0;
     var pctoggle = 0;
+    $('#namechangebutton').on('click', function(){
+        if(ectoggle ==0) {
+            $('#namechange').removeAttr('disabled');
+            $('#namechange').attr('enabled');
+            $('#namechange').val($('#namechange').attr('placeholder'));
+            $('#namechangebutton').text('DONE');
+            ectoggle = 1;
+        }
+        else{
+            $('#namechange').removeAttr('enabled');
+            $('#namechange').attr('disabled', true);
+            $('#namechangebutton').text('EDIT');
+            ectoggle = 0;
+        }
+    });
     $('#emailchangebutton').on('click', function(){
         if(ectoggle ==0) {
             $('#emailchange').removeAttr('disabled');

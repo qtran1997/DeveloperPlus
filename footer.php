@@ -12,8 +12,8 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center">
             <h1>My Account</h1>
             <a href="signup.php"><p>Register</p></a>
-            <a href="#"><p>My Account</p></a>
-            <a href=""><p>Profile Settings</p></a>
+            <a href="accountpage.php"><p>My Account</p></a>
+            <a href="#"><p>Profile Settings</p></a>
             <hr class="w-100 clearfix d-md-none hidden-sm hidden-md hidden-lg">
         </div>
 

@@ -83,7 +83,7 @@ if(isset($_SESSION['id']))
                                         <label for="name">Full Name</label>
                                     </div>
                                     <div class="col-lg-4 col-md-4">
-                                        <input name="name" class="passwordchange" type="text" placeholder="<?php echo $_SESSION['fname']; ?>" disabled>
+                                        <input name="name" id="namechange" type="text" placeholder="<?php echo $_SESSION['fname'] . " " . $_SESSION['lname']; ?>" disabled>
                                     </div>
                                     <div class="col-lg-4 col-md-4">
                                         <button type="button" id="namechangebutton">EDIT</button>
@@ -102,23 +102,11 @@ if(isset($_SESSION['id']))
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4">
-                                        <label for="password">Old Password</label>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <input name="pwd1" class="passwordchange" type="password" placeholder="********" disabled>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <button type="button" id="passwordchangebutton">EDIT</button>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4">
                                         <label for="password">New Password</label>
                                     </div>
                                     <div class="col-lg-4 col-md-4">
                                         <input name="pwd1" class="passwordchange" type="password" placeholder="********" disabled>
                                     </div>
-
                                 </div>
                                 <div class="row edit-field">
                                     <div class="col-lg-4 col-md-4">
@@ -127,7 +115,9 @@ if(isset($_SESSION['id']))
                                     <div class="col-lg-4 col-md-4">
                                         <input name="pwd2" class="passwordchange" type="password" placeholder="********" disabled>
                                     </div>
-
+                                    <div class="col-lg-4 col-md-4">
+                                        <button type="button" id="passwordchangebutton">EDIT</button>
+                                    </div>
                                 </div>
                                 <button type="submit" id="save-edits">SAVE CHANGES</button>
                             </div>
