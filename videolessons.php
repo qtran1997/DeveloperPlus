@@ -49,25 +49,25 @@ session_start();
             <nav class="navbar navbar-expand-lg navbar-light">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <button class="nav-link" id="filter-all" href="#">All Courses</button>
+                        <a class="nav-link" id="filter-all" href="#">All Courses</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="filter-css" href="#">CSS3</button>
+                        <a class="nav-link" id="filter-css" href="#">CSS3</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="filter-html" href="#">HTML5</button>
+                        <a class="nav-link" id="filter-html" href="#">HTML5</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="filter-bs" href="#">Bootstrap4</button>
+                        <a class="nav-link" id="filter-bs" href="#">Bootstrap4</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="filter-tech" href="#">Technology</button>
+                        <a class="nav-link" id="filter-tech" href="#">Technology</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="filter-design" href="#">Design</button>
+                        <a class="nav-link" id="filter-design" href="#">Design</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="filter-business" href="#">Business</button>
+                        <a class="nav-link" id="filter-business" href="#">Business</a>
                     </li>
                 </ul>
             </nav>
@@ -76,7 +76,7 @@ session_start();
         <!-- COURSE SELECTIONS --> 
         <div>
 
-            <div class="container mt-1 text-center">
+            <div class="container video-lesson mt-1 text-center">
                 <div class="card-deck">
                     <div class="card tut-css">
                         <div class="card-body">

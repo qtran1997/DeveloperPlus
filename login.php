@@ -26,43 +26,39 @@ session_start();
             else {
                 include 'navloggedout.php';
             }
-            
+
             ?>
         </div>
-
-        <div class="container-form" id="signin-form">
-            <div class="wrapper">
-                <div class="header">Log In to Your Account</div>
-
-                <div class="contact">
-                    <form action="loginsystem/loginsubmit.php" method="POST">
-                        <?php
-                        $failure = "";
-                        if(!empty($_GET['failure'])) {
-                            $failure = $_GET['failure'];
-                        }
-                        if($failure == 1) {
-                            echo "<p class='error'>Your information is incorrect!</p>";
-                        }
-                        ?>
-                        <p> 
-                            <label for="email">Email</label>
-                            <input type="email" name="email" required>
-                        </p>
-                        <p>
-                            <label for="pwd">Password</label>
-                            <input type="password" name="pwd" required>
-                        </p>
-                        <p class="full">
-                            <button>Log In</button>
-                            <a href="changepwd.php">Forgot Password?</a>
-                        </p>
-                        <div class="privacy">
-                            By logging in, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+        <div class="account-wrapper">
+            <div class="account-header">
+                <h1>Login</h1>
+                <hr id="account-bottom">
+                <p>Don't have an account?<a href="signup.php" class="link"> Sign Up</a></p>
+            </div>
+            <div class="login">
+                <form action="loginsystem/loginsubmit.php" method="POST">
+                    <?php
+                    $failure = "";
+                    if(!empty($_GET['failure'])) {
+                        $failure = $_GET['failure'];
+                    }
+                    if($failure == 1) {
+                        echo "<p class='error'>Your information is incorrect!</p>";
+                    }
+                    ?>
+                    <div class="login-form">
+                        <div class="login-input">
+                            <input type="email" name="email" placeholder="Email address" required>
                         </div>
-                    </form>
-                </div>
-                <div class="footer" id="signin-footer">Don't have an account?<a href="signup.php" class="link"> Sign Up</a></div>
+                        <div class="login-input">
+                            <input type="password" name="pwd" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <p class="text-center" id="forgot-password"><a href="changepwd.php">Forgot Password?</a></p>
+                    <div style="text-align:center;">
+                        <button class="btn form-btn" id="login-btn">Login</button>
+                    </div>
+                </form>
             </div>
         </div>
 

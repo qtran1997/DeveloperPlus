@@ -19,6 +19,11 @@ body {
     text-decoration: none;
 }
 
+.coursemenu_filter .nav-link {
+    background:none;
+    border:none;
+}
+
 .coursemenu_filter .nav-link:focus {
     color: #000 !important;
     font-weight: bold !important;
@@ -27,6 +32,12 @@ body {
 
 .nav-item {
     height: 35px !important;
+}
+
+.navbar-toggler-icon {
+    background: red;
+    color: #fff;
+    z-index: 999;
 }
 
 /************************* LOADING-TOP *************************/
@@ -86,12 +97,22 @@ body {
     font-weight: bold;
 }
 
+#see-more {
+    padding:5px; 
+    color: black; 
+    text-decoration:none; 
+    background-color:#EEE;
+    border-radius:5px !important;
+    border:solid black 1px !important;
+    margin-bottom:1%;
+}
+
 /************************* COURSES *************************/
 .card {
     border: none;
 }
 
-.card-deck{
+.video-lesson .card-deck{
     display: inline-block;
 }
 
@@ -241,6 +262,15 @@ body {
     }
 }
 
+@media screen and (min-width: 768px) {
+    #footer-cover p { 
+        max-width: 45%;
+    }
+
+    #footer-cover h1 {
+        font-size: 55px;
+    }
+}
 /************************* SUBSCRIBE FORM *************************/
 #subscribe-form {
     margin-top: 10%;
@@ -368,7 +398,7 @@ section.footer .bottom-footer h3{
     padding: 4px;
 }
 
-/* Select children in range of 2 - 6 inclusive */
+/* Select children in range of 1 - 6 inclusive */
 #sidebar ul li:nth-child(n+1):nth-child(-n+6):hover {
     background: rgba(230,230,230,.3);
 }
@@ -435,7 +465,6 @@ section.footer .bottom-footer h3{
     grid-column: 1 / -1;
     background: #048BA8;
 }
-
 
 /************************* END OF VIDEOS *************************/
 
@@ -580,7 +609,7 @@ section.footer .bottom-footer h3{
 .form input[type="text"],
 .form input[type="email"],
 .form textarea {
-    padding: 15px 3px;
+    padding: 15px 7px;
     border-color: black;
     width: 100%;
     transition: all 0.2s ease;
@@ -620,19 +649,19 @@ section.footer .bottom-footer h3{
 ::-webkit-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
-    padding-left: 7px;
+    padding-left: 3px;
 }
 
 ::-moz-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
-    padding-left: 7px;
+    padding-left: 3px;
 }
 
 ::-ms-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;
-    padding-left: 7px;
+    padding-left: 3px;
 }
 
 
@@ -654,116 +683,68 @@ section.footer .bottom-footer h3{
 /************************* END OF CONTACT *************************/
 
 /************************* LOGIN/SIGNUP *************************/
-.container-form {
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5em;
-    margin-bottom: 10%;
-    margin-top: 2%;
-}
 
-.header {
-    text-align: center;
-    color: #fff;
-    font-size: 17px;
-    text-transform: uppercase;
-    background: #496DDB;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.wrapper >* {
-    padding: 1.3rem;
-}
-
-.wrapper {
-    border-radius:16px;
-    border: 1px black solid;
-    box-shadow: 0 0 20px rgba(72,94,116,0.7);
-}
-
-.contact {
-    background: #fff;
-}
-
-.contact form {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 15px;
-}
-
-.contact form label {
-    display: block;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.contact form p {
+.account-wrapper > * {
     margin: 0;
+    padding: 0;
 }
 
-.contact form input {
-    background: #ecf1f1;
-    border-radius: 6px;
-    border: none;
-    font-size: 15px;
-    opacity: .5;
-}
-
-.contact form input:focus {
-    background: #fff;
-    transition: 1s;
-    outline-color: #496DDB;
-    opacity: 1;
-}
-
-.contact form .privacy {
-    text-align: center;
-    font-size: 13px;
-}
-
-.contact form .full {
-    text-align: center;
-}
-
-.contact form .full a {
-    font-size: 13px;
-    color: #000080;
-}
-
-.contact form .privacy a {
-    color: #000;
-    font-weight: bold;
-}
-
-.contact form input {
+.account-wrapper {
     width: 100%;
-    padding: .5em;
+    max-width: 580px;
+    margin: 50px auto 0;
+    padding: 20px;
 }
 
-.contact form button {
-    width: 100%;
-    height: 35px;
-    font-size: 15px;
-    background: #496DDB;
-    color: #fff;
-    border: 0;
-    text-transform: uppercase;
-}
-
-#signin-footer {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background: #496DDB;
-    color: #fff;
+.account-header {
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-#signin-footer a {
+.account-header p {
+    font-size: 15px;
+    padding: 0;
+    margin-top: -10px;
+    opacity: 0.8;
+}
+
+#account-bottom {
+    margin-top: -8px;
+    width: 65%;
+    border: 1px solid #C95D63;
+}
+
+.login {
+    font-size: 13px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.login input {
+    width: 100%;
+    min-height: 55px;
+    margin: 10px 0;
+    overflow: hidden;
+    font-size: 16px;
+    padding-left: 7px;
+}
+
+.login input:focus {
+    outline: none;
+}
+
+.link, .link:hover,
+#forgot-password a, #forgot-password a:hover{
     color: #000;
     font-weight: bold;
     text-decoration: none;
+}
+
+#register-footer a, #register-footer a:hover {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .error{
@@ -779,59 +760,184 @@ section.footer .bottom-footer h3{
 /************************* END OF LOGIN/SIGNUP *************************/
 
 
+
+
+
+/************************* SHOPPING CART *************************/
+
+#cart-header {
+    background: #505763;
+    height: 20vh;
+    padding: 3em;
+    color: #fff;
+}
+
+.cart-head-text p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cart-head-text h1 {
+    font-size: 27px;
+}
+
 /************************* CHECKOUT *************************/
 
-.grid {
-    display: grid;
-    grid-template-columns: 50% 49%;
-    grid-column-gap: 1em;
+.cart-wrapper {
     width: 100%;
+    margin-top: 10px;
+}
+.shopright {
+    float:left;
+    width: 35%;
+    height: 400px;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.shopleft {
+    float: left;
+    width: 65%;
+    height: 600px;
     padding: 2em;
 }
 
-.grid > div {
-    padding: .5em;
+
+.price-tab {
+    display: inline-block;
+    margin-left: 550px;
 }
 
-
-.bundle-info .cart{
-    padding: .7em;
+.checkout-tab {
+    display: inline-block;
+    margin-left: 230px;
 }
 
-.bundle-info items {
-    padding-left: 15px;
+.shopleft hr {
+    width: 100%;
+    border: 1px solid black;    
+    opacity: 0.3;
 }
 
-.bundle-info .cart h5 {
-    font-size: 18px;
+#shop-list-header {
+    font-size: 20px;
+    opacity: 0.7;
 }
 
-#total-cost {    
-    float: right;
-}
-
-.billing-info form{
-    display: grid;
-    padding: 1em;
-    grid-gap: 1em;
-}
-
-.billing-info form input {
-    font-size: 12px;
-    padding: 8px;
+.course-wrapper {
     width: 100%;
 }
 
-.billing-info button {
-    background: #cb2027;
-    color: #fff;
-    margin-left: 16px;
+.left-img {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.left-img > * {
+    display: inline-block;
+}
+
+.left-img img {
+    height: 120px; 
     width: 120px;
 }
 
-.grid img {
-    height: 50px;
-    width: 80px;
+.remove-tab {
+    display: inline-block;
+    margin-left: 110px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cost-tab {
+    display: inline-block;
+    margin-left: 150px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.courses-added li {
+    list-style: none;
+}
+
+.checkout-body {
+    padding-top: 4px;
+}
+
+.checkout-body h5 {
+    padding-top: 20px;
+}
+
+.checkout-body button {
+    background: #C95D63;
+    color: #fff;
+    padding: 5px;
+    width: 50%;
+}
+
+.checkout-submit img {
+    height: 100px;
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.billing-info-right {
+    float: right;
+    border-left: 1px solid #000;
+    height: 55%;
+    width: 40%;
+    margin-top: -12%;
+}
+
+.user-summary-header h5 {
+    font-size: 25px;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 160px;
+}
+
+.total-tab {
+    margin-left: 240px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.item {
+    margin: 0;
+    padding: 0;
+}
+
+.item h6 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.item p {
+    max-width: 40%;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.item-line {
+    width: 90%;
+    padding-left: 0% !important;
 }
 
 /************************* END OF CHECKOUT *************************/
@@ -846,34 +952,99 @@ section.footer .bottom-footer h3{
     color: #0D4F8B;
 }
 
-.account-profile {
-    color: #000;
-    padding: 3em;
+.wrap {
+    width: 100%;
 }
 
-.account-profile input {
-    width: 300px;
-    padding-left: 4px;
-}
-
-.change-info {
+.floatright {
+    float:left;
+    width: 100%;
+/*    height: 600px;*/
     padding: 2em;
+    margin: 0 auto;
 }
 
-.change-info label {
-    font-size: 18px;
-    padding-left: 1.3em;
+.floatleft {
+    float: left;
+    width: 100%;
+    height: 150px !important;
+    padding: 2em;
+    background: #505763;
 }
 
-.change-info button {
-    width: 135px;
-    background: #0D4F8B;
+.floatleft a{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
     color: #fff;
 }
 
+.change-fields {
+    padding: 1em;
+}
+
+.change-fields .row label {
+    font-weight: bold;
+    margin-bottom: -6px;
+}
+
+.change-fields .row {
+    margin-bottom: 20px;
+}
+
+.floatright {
+    width: 100%;
+}
+
+.floatright a {
+    font-size: 30px;
+}
+
+.floatright .row input {
+    border: 1px solid #000;
+    width: 100%;
+    min-height: 40px;
+    margin-top: 5px;
+    padding-left: 7px;
+}
+
+.floatright .row button {
+    width: 100%;
+    margin-top: 5px;
+    color: #fff;
+    background: #C95D63;
+    min-height: 40px;
+}
+
 #save-edits {
-    width: 150px !important;
+    width: 50% !important;
     height: 50px;
+    margin:5px auto;
+    background: #C95D63;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+
+    .floatright {
+        width: 100%;
+    }
+
+    .change-fields .row label {
+        margin-top: 7px;
+    }
+
+    .floatright .row button {
+        margin-top: 5px;
+        color: #fff;
+        width: 40%;
+    }
+
+    #save-edits {
+        width: 25% !important;
+        color: #fff;
+    }
 }
 
 

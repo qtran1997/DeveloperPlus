@@ -27,161 +27,99 @@ session_start();
             ?>
         </div>
 
-        <div class="grid" id="checkout">
-            <div class="bundle">
-                <h4>Bundle Package</h4>
-                <div class="bundle-info">
-                    <div class="row items">
-                        <!--
 
-<div class="col-lg-6 col-md-6">
-<img src="Images/card.png" alt="">
-<img src="Images/expiration.png" alt="">
-<img src="Images/cvv.jpg" alt="">
-</div>
--->
 
-                    </div>
-                    <div class="row cart">
-                        <div class="col-lg-4">
-                            <img src="Images/card.png" alt="">
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>Step 1</h5>
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>FREE!</h5>
-                        </div>
-                    </div>
-                    <div class="row cart">
-                        <div class="col-lg-4">
-                            <img src="Images/expiration.png" alt="">
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>Step 2</h5>
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>Sign up for free access!</h5>
-                        </div>
-                    </div>
-                    <div class="row cart">
-                        <div class="col-lg-4">
-                            <img src="Images/cvv.jpg" alt="">
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>Step 3</h5>
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>$0.10</h5>
-                        </div>
-                    </div>
-                    <div class="row cart">
-                        <div class="col-lg-4">
-                            <img src="Images/cvv.jpg" alt="">
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>Step 4</h5>
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>$0.20</h5>
-                        </div>
-                    </div>
-                    <div class="row cart">
-                        <div class="col-lg-4">
-                            <img src="Images/cvv.jpg" alt="">
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>Step 5</h5>
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>$0.20</h5>
-                        </div>
-                    </div>
-                    <hr class="w-100 clearfix">
 
-                    <div class="row cart">
-                        <div class="offset-lg-4 col-lg-4">
-                            <h5>Total:</h5>
-                        </div>
-                        <div class="col-lg-4">
-                            <h5>$0.50</h5>
-                        </div>
+
+
+
+
+
+        <div class="billing-info-right">
+            <div class="user-checkout-summary">
+                <div class="user-summary-header ml-3">
+                    <h5><i class="fas fa-shopping-cart"></i> Cart Summary</h5> 
+                </div>
+                <div class="user-checkout-summary-content pl-5 pt-2">
+                    <div class="item" id="item1">
+                        <h6>1x CSS Introduction <span class="tab">$19.99</span></h6>
+                        <p>CSS Instructional Video Collection</p>
                     </div>
-                </div>     
+                    <hr class="item-line">
+
+                    <div class="item" id="item2">
+                        <h6>1x CSS Introduction <span class="tab">$0.00</span></h6>
+                        <p>CSS Instructional Video Collection</p>
+                    </div>
+                    <hr class="item-line">
+
+                    <div class="item" id="item3">
+                        <h6>1x CSS Introduction <span class="tab">$0.00</span></h6>
+                        <p>CSS Instructional Video Collection</p>
+                    </div>
+                    <hr class="item-line">
+                    <span class="total-tab">Subtotal: $19.99</span>
+                </div>
             </div>
-            <!--
-<div class="billing">
-<h4>Billing Information:</h4>
-<div class="billing-info">
-<form action="stripesystem/onsitecheckout.php" method="POST">
-<div class="row">
-<div class="col-lg-6 col-md-6">
-<input name="cnumber" type="text" required placeholder="Credit Card Number">
-</div>
-<div class="col-lg-6 col-md-6">
-<img src="Images/card.png" alt="">
-<img src="Images/expiration.png" alt="">
-<img src="Images/cvv.jpg" alt="">
-</div>    
-</div>
-<div class="row">
-<div class="col-lg-3 col-md-3">
-<input name="ccvc" type="password" required placeholder="CVC">
-</div>
-<div class="col-lg-5 col-md-5">
-<input name="cmonth" type="text" required placeholder="Month">
-</div>
-<div class="col-lg-4 col-md-4">
-<input name="cyear" type="text" required placeholder="Year">
-</div>
-</div>
-<div class="row">
-<div class="col-lg-6 col-md-6">
-<input name="cpostalcode" type="text" required placeholder="Postal Code">
-</div>
-<div class="col-lg-6 col-md-6">
-<input name="ccountry" type="text" required placeholder="Country">
-</div>
-</div>
-</form>
-<button>Checkout</button>
-</div>
--->
-            <div class="billing">
-
-                <h4>Billing:</h4>
-                <form style="display:inline-block; margin-right:12%" action="stripesystem/stripe.php" method="POST">
-                    <script
-                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                            data-key="pk_test_Zpooc1w4cUlZMOMsrHrs85V9"
-                            data-amount="50"
-                            data-name="AmazonClicker.com"
-                            data-description="Amazon Clicker Charge"
-                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                            data-locale="auto"
-                            data-zip-code="true"
-                            data-email="<?php echo $_SESSION['email'] ?>">
-                    </script>
-                </form>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <h5>Pay with Paypal!</h5>
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="G8K5YCE684SRW">
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
-
-
-            </div>
-
         </div>
 
-        <!--        </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h4>Billing:</h4>
+        <form style="display:inline-block; margin-right:12%" action="stripesystem/stripe.php" method="POST">
+            <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_Zpooc1w4cUlZMOMsrHrs85V9"
+                    data-amount="50"
+                    data-name="SheekMedia.com/DeveloperPlus"
+                    data-description="Video Courses"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto"
+                    data-zip-code="true"
+                    data-email="<?php echo $_SESSION['email'] ?>">
+            </script>
+        </form>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <h5>Pay with Paypal!</h5>
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="G8K5YCE684SRW">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+
+
+
+
+
+
 
         <!--
 <section class="footer">
 <?php  
-include 'footer.php';
+    include 'footer.php';
 ?>
 </section>
 -->

@@ -34,91 +34,96 @@ if(isset($_SESSION['id']))
         </div>
 
 
+
         <div class="account-profile">
             <div class="heading">
-               <?php
-                        $purchased = "";
-                        if(!empty($_GET['purchased'])) {
-                            $purchased = $_GET['purchased'];
-                        }
-                        if($purchased == 1) {
-                            echo "<p class='success'>Thank you so much for purchasing our product!!</p>";
-                        }
-                        ?>
-                <i class="fas fa-shopping-cart"></i>
                 <?php
-                if($_SESSION['pb'] == 1) {
-                    echo '<p class="success" style="display:inline-block">Purchased Premium Bundle!</p>';
+                $purchased = "";
+                if(!empty($_GET['purchased'])) {
+                    $purchased = $_GET['purchased'];
                 }
-                else {
-                    echo '<a href="checkout.php">Purchase Premium Bundle</a>';
+                if($purchased == 1) {
+                    echo "<p class='success'>Thank you so much for purchasing our product!!</p>";
                 }
                 ?>
 
             </div>
-            <hr class="w-100 clearfix">
 
-            <div class="heading">
-                <i class="fas fa-user"></i> Edit Profile
-            </div>
-            <hr class="w-100 clearfix">
-            <div class="change-info">
-                <form action="loginsystem/changeinfosubmit.php" method="POST">
-                    <?php 
-                    $failure = "";
-                    if(!empty($_GET['failure'])) {
-                        $failure = $_GET['failure'];
-                    }
-                    if($failure == 1){
-                        echo "<p class='error'>Your new passwords do not match!</p>";
-                    }
-                    $success = "";
-                    if(!empty($_GET['success'])) {
-                        $success = $_GET['success'];
-                    }
-                    if($success == 1) {
-                        echo "<p class='success'>Success!</p>";
-                    }
-                    ?>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <label for="email">Email Address</label>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <input name="email" id ="emailchange" type="email" placeholder="<?php echo $_SESSION['email']; ?>" disabled>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <button type="button" id="emailchangebutton">EDIT</button>
-                        </div>
-                    </div>
 
-                    <hr class="w-100 clearfix">
-                    <br>
-                    <p>Leave the password boxes empty if you do not want to change them.</p>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4">
-                            <label for="password">Password</label>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <input name="pwd1" class="passwordchange" type="password" placeholder="********" disabled>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <button type="button" id="passwordchangebutton">EDIT</button>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row edit-field">
-                        <div class="col-lg-4 col-md-4">
-                            <label for="password">Confirm Password</label>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <input name="pwd2" class="passwordchange" type="password" placeholder="********" disabled>
-                        </div>
+            <div class="wrap">
+                <div class="floatleft">
+                    <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
+                    <a href="shoppingcart.php"><i class="fas fa-shopping-cart"></i> Shop</a>
+                </div>
+                <div class="floatright">
+                    <a href="accountpage.php"><i class="fas fa-user"></i> Edit Profile</a>
 
+                    <div class="change-info">
+                        <form action="loginsystem/changeinfosubmit.php" method="POST">
+                            <?php 
+                            $failure = "";
+                            if(!empty($_GET['failure'])) {
+                                $failure = $_GET['failure'];
+                            }
+                            if($failure == 1){
+                                echo "<p class='error'>Your new passwords do not match!</p>";
+                            }
+                            $success = "";
+                            if(!empty($_GET['success'])) {
+                                $success = $_GET['success'];
+                            }
+                            if($success == 1) {
+                                echo "<p class='success'>Success!</p>";
+                            }
+                            ?>
+
+                            <div class="change-fields">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <label for="name">Full Name</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input name="name" id="namechange" type="text" placeholder="<?php echo $_SESSION['fname'] . " " . $_SESSION['lname']; ?>" disabled>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <button type="button" id="namechangebutton">EDIT</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <label for="email">Email Address</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <input name="email" id ="emailchange" type="email" placeholder="<?php echo $_SESSION['email']; ?>" disabled>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                        <button type="button" id="emailchangebutton">EDIT</button>
+                                    </div>
+                                </div>    
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label for="password">New Password</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input name="pwd1" class="passwordchange" type="password" placeholder="********" disabled>
+                                    </div>
+                                </div>
+                                <div class="row edit-field">
+                                    <div class="col-lg-4 col-md-4">
+                                        <label for="password">Confirm Password</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input name="pwd2" class="passwordchange" type="password" disabled>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <button type="button" id="passwordchangebutton">EDIT</button>
+                                    </div>
+                                </div>
+                                <button type="submit" id="save-edits">SAVE CHANGES</button>
+                            </div>
+                        </form>
                     </div>
-                    <hr class="w-100 clearfix">
-                    <button type="submit" id="save-edits">SAVE CHANGES</button>
-                </form>
+                </div>
             </div>
         </div>
 
@@ -129,8 +134,10 @@ if(isset($_SESSION['id']))
 
 
 
-        <!--
 
+
+
+        <!--
 <section class="footer">
 <?php  
 include 'footer.php';
@@ -138,6 +145,8 @@ include 'footer.php';
 
 </section>
 -->
+
+
 
         <script type="application/javascript" src="javascript/accountpage.js"></script>
 
