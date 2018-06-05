@@ -20,11 +20,11 @@
     }
 
     else {
-        $_SESSION['id'] = $row['id'];
-        $_SESSION['email'] = $row['email'];
-        $_SESSION['fname'] = $row['fname'];
-        $_SESSION['lname'] = $row['lname'];
-        $_SESSION['pb'] = $row['pb'];
+        $_SESSION = $row;
+//        $_SESSION['id'] = $row['id'];
+//        $_SESSION['email'] = $row['email'];
+//        $_SESSION['fname'] = $row['fname'];
+//        $_SESSION['lname'] = $row['lname'];
     
         header("Location: ../accountpage.php");
 //        header("Location: ../index.php");

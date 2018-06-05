@@ -86,7 +86,7 @@ $_SESSION['cid'] = "bs001";
                                 }
                                 else
                                 {
-                                    if($_SESSION['pb'] == 1)
+                                    if($_SESSION['bs001'] == 1)
                                     {
                                         echo 'id="video3"';
                                     }
@@ -105,7 +105,7 @@ $_SESSION['cid'] = "bs001";
                                 }
                                 else
                                 {
-                                    if($_SESSION['pb'] == 1)
+                                    if($_SESSION['bs001'] == 1)
                                     {
                                         echo 'id="video4"';
                                     }
@@ -124,7 +124,7 @@ $_SESSION['cid'] = "bs001";
                                 }
                                 else
                                 {
-                                    if($_SESSION['pb'] == 1)
+                                    if($_SESSION['bs001'] == 1)
                                     {
                                         echo 'id="video5"';
                                     }
@@ -279,8 +279,9 @@ $_SESSION['cid'] = "bs001";
 
                 <?php
                 include 'universalcomment.php';
+                include 'universalbutton.php';
                 ?>
-                
+
             </div>
             <hr class="w-100 clearfix">
             <h3>Add your own comment!</h3>
